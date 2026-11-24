@@ -8,6 +8,7 @@ sábado    cérebro de scout (tarefa agendada no Claude) escolhe o tema, pesquis
 madrugada worker gera voz + vídeo dos 10, um por vez, e manda cada um pro Telegram
 domingo   você aprova (um a um ou "✅ Aprovar os 10 da semana")
 segunda   o YouTube publica sozinho: #10 às 08:00 … #1 às 21:30, todos na playlist da semana
+          com INSTAGRAM=1, o worker publica cada um também como Reel, no mesmo horário
 ```
 
 ## Estrutura
@@ -72,11 +73,27 @@ Telegram e YouTube se configuram igual à Novelinha (veja o README de lá). Dife
 | `JANELA_RENDER` | `01-07` | Horas em que o worker pode renderizar (`sempre` desliga) |
 | `MAX_EM_REVISAO` | `12` | Pausa o render se houver esse tanto esperando aprovação |
 | `PLAYLIST_SEMANAL` | `1` | Cria a playlist pública da semana e põe os 10 nela |
-| `DRY_RUN` | `0` | `1` simula Telegram e YouTube |
+| `INSTAGRAM` | `0` | `1` publica cada short também como Reel (veja abaixo) |
+| `DRY_RUN` | `0` | `1` simula Telegram, YouTube e Instagram |
 
 Se a aprovação atrasar e a segunda já tiver passado, cada short cai no próximo horário livre da lista.
 
-Comandos no bot: `/status`, `/fila`, `/render`, `/pausar`, `/retomar`, `/aprovar_semana 2026-w49`, `/retentar 2026-w49-07`, `/erro 2026-w49-07`.
+### Instagram (Reels)
+
+A API do Instagram não agenda: o worker publica cada Reel quando chega o horário do short (o mesmo do YouTube) e avisa no Telegram com 📸.
+
+1. Deixe a conta do canal como **Profissional** (Comercial ou Criador de conteúdo) nas configurações do Instagram.
+2. Em developers.facebook.com, crie um app do tipo **Empresa** e adicione o produto **Instagram → API setup with Instagram login**. Permissões: `instagram_business_basic` e `instagram_business_content_publish`.
+3. Em *Funções do app → Testadores do Instagram*, adicione a conta do canal e aceite o convite no app do Instagram (Configurações → Apps e sites). Publicando só na sua conta, o app pode ficar em modo de desenvolvimento.
+4. No painel do produto, em *Generate access tokens*, conecte a conta e copie o token (já é o de 60 dias).
+5. Descubra o ID: `curl "https://graph.instagram.com/v25.0/me?fields=user_id,username&access_token=SEU_TOKEN"`.
+6. No `services/worker/.env`: `INSTAGRAM=1`, `IG_USER_ID=<user_id>`, `IG_TOKEN=<token>`, e reinicie (`docker compose up -d worker`).
+
+O worker renova o token sozinho toda semana. Se a renovação falhar, ele avisa no Telegram, e aí é só gerar outro token (passo 4).
+Se o upload direto der erro no login do Instagram, a alternativa documentada pela Meta é o login do Facebook: conta do Instagram ligada a uma Página, token de Página e `IG_HOST=graph.facebook.com`.
+Limite da Meta: 100 posts via API por 24 h (o top 10 usa 10).
+
+Comandos no bot: `/status`, `/fila`, `/render`, `/pausar`, `/retomar`, `/aprovar_semana 2026-w49`, `/retentar 2026-w49-07`, `/ig_retentar 2026-w49-07`, `/erro 2026-w49-07`.
 
 ## Fontes de dados
 Sem scraping de Sofascore/Transfermarkt/FotMob (termos de uso). O cérebro usa matérias, sites de ligas e clubes, e cita tudo em `fontes`, que vai para a descrição do vídeo.

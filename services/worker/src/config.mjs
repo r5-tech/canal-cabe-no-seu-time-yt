@@ -32,6 +32,13 @@ export const config = {
   maxEmRevisao: Number(env.MAX_EM_REVISAO ?? 12),
   antecedenciaMinHoras: Number(env.ANTECEDENCIA_MIN_HORAS ?? 1),
   diasManterArquivos: Number(env.DIAS_MANTER_ARQUIVOS ?? 14),
+  /** Instagram (Reels): publica no mesmo horário do YouTube */
+  instagram: env.INSTAGRAM === "1",
+  igUserId: env.IG_USER_ID ?? "",
+  igToken: env.IG_TOKEN ?? "",
+  /** graph.instagram.com (login do Instagram) ou graph.facebook.com (login do Facebook + Página) */
+  igHost: env.IG_HOST ?? "graph.instagram.com",
+  igVersao: env.IG_VERSAO ?? "v25.0",
   /** meta de duração do short (s): fora dela o Telegram mostra um aviso */
   duracaoMin: Number(env.DURACAO_MIN ?? 60),
   duracaoMax: Number(env.DURACAO_MAX ?? 65),

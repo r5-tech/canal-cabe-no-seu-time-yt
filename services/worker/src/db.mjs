@@ -33,6 +33,14 @@ db.exec(`
   );
   CREATE TABLE IF NOT EXISTS kv (chave TEXT PRIMARY KEY, valor TEXT);
 `);
+// Instagram: ig_status = pendente | publicado | erro (nulo = não vai pro Instagram)
+for (const col of ["ig_status TEXT", "ig_media_id TEXT", "ig_erro TEXT", "ig_tentativas INTEGER NOT NULL DEFAULT 0"]) {
+  try {
+    db.exec(`ALTER TABLE shorts ADD COLUMN ${col}`);
+  } catch {
+    /* coluna já existe */
+  }
+}
 
 /** Ordem de trabalho: semana mais antiga primeiro e, dentro dela, do #10 ao #1 (a ordem da contagem). */
 const ORDEM = "ORDER BY semana, posicao DESC";
@@ -50,6 +58,12 @@ export const sh = {
     const sets = chaves.map((k) => `${k} = ?`).join(", ");
     db.prepare(`UPDATE shorts SET ${sets}, atualizado_em = datetime('now') WHERE id = ?`).run(...chaves.map((k) => campos[k] ?? null), id);
   },
+  igParaPublicar: () =>
+    db
+      .prepare(
+        "SELECT * FROM shorts WHERE ig_status = 'pendente' AND status IN ('scheduled','published') AND publish_at <= ? ORDER BY publish_at",
+      )
+      .all(new Date().toISOString()),
   publishAtsOcupados: () =>
     db
       .prepare("SELECT publish_at FROM shorts WHERE publish_at IS NOT NULL AND status IN ('approved','scheduled','published')")

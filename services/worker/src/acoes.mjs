@@ -5,6 +5,7 @@ import { config, log } from "./config.mjs";
 import { kv, sh } from "./db.mjs";
 import { caminhoPronto, caminhoVideo, hashArquivo, lerFicha, limparArquivos, preparar, renderizar } from "./etapas.mjs";
 import * as tg from "./telegram.mjs";
+import * as ig from "./instagram.mjs";
 import * as yt from "./youtube.mjs";
 
 const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
@@ -126,7 +127,7 @@ export async function aprovar(id, messageId) {
   const e = sh.get(id);
   if (!e || e.status !== "in_review") return `${id} não está em revisão (${e?.status ?? "inexistente"})`;
   const publishAt = horarioDoShort(e, sh.publishAtsOcupados());
-  sh.atualizar(id, { status: "approved", publish_at: publishAt });
+  sh.atualizar(id, { status: "approved", publish_at: publishAt, ...(config.instagram ? { ig_status: "pendente", ig_tentativas: 0, ig_erro: null } : {}) });
   const quando = formatarLocal(publishAt);
   if (messageId ?? e.telegram_msg_id) await tg.editarLegenda(messageId ?? e.telegram_msg_id, `✅ <b>#${e.posicao}</b> ${esc(id)} aprovado · publica em ${quando}`);
   log(`[${id}] aprovado para ${publishAt}`);
@@ -166,12 +167,47 @@ export async function publicarAprovados() {
       }
       const id = await yt.enviar(e.video, lerFicha(e.arquivo), publishAt);
       sh.atualizar(e.id, { status: "scheduled", youtube_id: id, publish_at: publishAt, erro: null });
-      await tg.enviarMensagem(`📅 <b>#${e.posicao}</b> ${esc(e.id)} no YouTube, publica em ${formatarLocal(publishAt)}\nhttps://youtu.be/${id}`);
+      await tg.enviarMensagem(
+        `📅 <b>#${e.posicao}</b> ${esc(e.id)} no YouTube, publica em ${formatarLocal(publishAt)}\nhttps://youtu.be/${id}${config.instagram ? "\n📸 Instagram sai no mesmo horário" : ""}`,
+      );
     } catch (err) {
       sh.atualizar(e.id, { erro: err.message.slice(0, 2000) });
       log(`[${e.id}] erro no upload:`, err.message);
       await tg.enviarMensagem(`⚠️ Upload de <b>${esc(e.id)}</b> falhou:\n<code>${esc(err.message.slice(0, 800))}</code>`);
       break; // provavelmente credencial/cota: não insiste nos outros agora
+    }
+  }
+}
+
+/** Publica no Instagram os Reels cujo horário chegou (o YouTube publica sozinho; o Instagram, não). */
+export async function publicarInstagram() {
+  if (!config.instagram) return;
+  try {
+    await ig.renovarTokenSeNecessario();
+  } catch (e) {
+    log(e.message);
+    if (kv.get("ig_aviso_token") !== new Date().toISOString().slice(0, 10)) {
+      kv.set("ig_aviso_token", new Date().toISOString().slice(0, 10));
+      await tg.enviarMensagem(`⚠️ ${esc(e.message)}
+Gere um token novo e coloque em IG_TOKEN no .env.`);
+    }
+  }
+  for (const e of sh.igParaPublicar()) {
+    try {
+      const id = await ig.publicarReel(e.video, lerFicha(e.arquivo));
+      sh.atualizar(e.id, { ig_status: "publicado", ig_media_id: id, ig_erro: null });
+      await tg.enviarMensagem(`📸 <b>#${e.posicao}</b> ${esc(e.id)} publicado no Instagram`);
+      log(`[${e.id}] publicado no Instagram (${id})`);
+    } catch (err) {
+      const t = (e.ig_tentativas ?? 0) + 1;
+      const falhou = t >= config.maxTentativas;
+      sh.atualizar(e.id, { ig_tentativas: t, ig_erro: err.message.slice(0, 2000), ...(falhou ? { ig_status: "erro" } : {}) });
+      log(`[${e.id}] erro no Instagram (tentativa ${t}):`, err.message);
+      if (falhou)
+        await tg.enviarMensagem(
+          `⚠️ Instagram de <b>${esc(e.id)}</b> falhou ${t}x:\n<code>${esc(err.message.slice(0, 800))}</code>\nUse /ig_retentar ${esc(e.id)}`,
+        );
+      break; // provavelmente token/limite: não insiste nos outros agora
     }
   }
 }
@@ -185,7 +221,7 @@ export function marcarPublicados() {
   }
   const limite = Date.now() - config.diasManterArquivos * 86_400_000;
   for (const e of sh.porStatus("published")) {
-    if (e.video && new Date(e.publish_at).getTime() < limite) {
+    if (e.video && new Date(e.publish_at).getTime() < limite && e.ig_status !== "pendente") {
       limparArquivos(e);
       sh.atualizar(e.id, { video: null });
     }
@@ -207,6 +243,9 @@ export function statusTexto() {
     `👀 em revisão: ${n("in_review")}`,
     `✅ aprovados: ${n("approved")} · 📅 agendados: ${n("scheduled")} · 📺 publicados: ${n("published")}`,
     `🔁 para refazer: ${n("rejected")} · ⚠️ erro: ${n("erro")}`,
+    config.instagram
+      ? `📸 Instagram: ${sh.todos().filter((e) => e.ig_status === "pendente").length} na fila · ${sh.todos().filter((e) => e.ig_status === "publicado").length} publicados · ${sh.todos().filter((e) => e.ig_status === "erro").length} com erro`
+      : "",
     prox ? `\n<b>Próximas publicações</b>\n${prox}` : "",
   ].join("\n");
 }
@@ -242,11 +281,18 @@ export async function comando(texto) {
       sh.atualizar(e.id, { status: "draft", tentativas: 0, erro: null });
       return `${e.id} de volta para a fila`;
     }
+    case "/ig_retentar": {
+      const e = arg && sh.get(arg);
+      if (!e) return "uso: /ig_retentar 2026-w48-07";
+      sh.atualizar(e.id, { ig_status: "pendente", ig_tentativas: 0, ig_erro: null });
+      return `${e.id} volta para a fila do Instagram`;
+    }
     case "/erro": {
       const e = arg && sh.get(arg);
-      return e?.erro ? `<code>${esc(e.erro.slice(0, 3500))}</code>` : "sem erro registrado";
+      const txt = [e?.erro, e?.ig_erro && `Instagram: ${e.ig_erro}`].filter(Boolean).join("\n\n");
+      return txt ? `<code>${esc(txt.slice(0, 3500))}</code>` : "sem erro registrado";
     }
     default:
-      return "Comandos: /status /fila /render /pausar /retomar /aprovar_semana 2026-w48 /retentar 2026-w48-07 /erro 2026-w48-07";
+      return "Comandos: /status /fila /render /pausar /retomar /aprovar_semana 2026-w48 /retentar 2026-w48-07 /ig_retentar 2026-w48-07 /erro 2026-w48-07";
   }
 }

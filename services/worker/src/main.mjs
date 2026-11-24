@@ -1,6 +1,6 @@
 import { config, log } from "./config.mjs";
 import { kv } from "./db.mjs";
-import { aprovar, aprovarSemana, comando, marcarPublicados, processarProximo, publicarAprovados, rejeitar, sincronizar } from "./acoes.mjs";
+import { aprovar, aprovarSemana, comando, marcarPublicados, processarProximo, publicarAprovados, publicarInstagram, rejeitar, sincronizar } from "./acoes.mjs";
 import * as tg from "./telegram.mjs";
 
 const INTERVALO_MS = 60_000;
@@ -14,8 +14,11 @@ async function ciclo() {
     const forcar = kv.get("forcar") === "1";
     if (forcar) kv.set("forcar", "0");
     // processa em sequência enquanto houver trabalho (um short por vez); /render libera a fila toda
-    while (await processarProximo({ forcar }));
+    // Instagram primeiro: ele não agenda, então o horário tem que ser respeitado pelo worker
+    await publicarInstagram();
+    while (await processarProximo({ forcar })) await publicarInstagram();
     await publicarAprovados();
+    await publicarInstagram();
     marcarPublicados();
   } catch (e) {
     log("erro no ciclo:", e);
@@ -24,7 +27,9 @@ async function ciclo() {
   }
 }
 
-log(`worker iniciado · horários ${config.horarios.join(", ")} · janela ${config.janelaRender}${config.dryRun ? " · DRY_RUN" : ""}`);
+log(
+  `worker iniciado · horários ${config.horarios.join(", ")} · janela ${config.janelaRender}${config.instagram ? " · + Instagram" : ""}${config.dryRun ? " · DRY_RUN" : ""}`,
+);
 
 tg.escutar({
   aoComando: async (texto) => {
