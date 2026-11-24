@@ -13,7 +13,7 @@ segunda   o YouTube publica sozinho: #10 às 08:00 … #1 às 21:30, todos na pl
 ## Estrutura
 
 ```
-cabe-no-seu-time/
+canal-cabe-no-seu-time-yt/
 ├─ fichas/<semana>/<semana>-NN.json   # uma ficha por short (NN = posição no top 10)
 ├─ fichas/exemplo/                    # ficha modelo (Rômulo); o worker ignora esta pasta
 ├─ cerebro/PROMPT.md                  # instruções da tarefa semanal de scout
