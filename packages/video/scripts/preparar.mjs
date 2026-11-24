@@ -48,4 +48,7 @@ const saida = path.join(DATA_DIR, "prontos", `${ep.id}.json`);
 fs.mkdirSync(path.dirname(saida), { recursive: true });
 fs.writeFileSync(saida, JSON.stringify(ep, null, 2));
 const total = ep.cenas.reduce((a, c) => a + c.duracaoAudio, 0);
-console.log(`\n${saida}\nnarração total: ${total.toFixed(1)}s em ${((Date.now() - t0) / 1000).toFixed(0)}s`);
+// mesma conta do timing.ts: respiro de 0,35 s por cena, cena mínima de 2,2 s e cartela final de 2,5 s
+ep.duracaoTotal = Number((ep.cenas.reduce((a, c) => a + Math.max(c.duracaoAudio + 0.35, 2.2), 0) + 2.5).toFixed(1));
+fs.writeFileSync(saida, JSON.stringify(ep, null, 2));
+console.log(`\n${saida}\nnarração total: ${total.toFixed(1)}s · vídeo: ${ep.duracaoTotal}s · em ${((Date.now() - t0) / 1000).toFixed(0)}s`);

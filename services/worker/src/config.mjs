@@ -32,6 +32,9 @@ export const config = {
   maxEmRevisao: Number(env.MAX_EM_REVISAO ?? 12),
   antecedenciaMinHoras: Number(env.ANTECEDENCIA_MIN_HORAS ?? 1),
   diasManterArquivos: Number(env.DIAS_MANTER_ARQUIVOS ?? 14),
+  /** meta de duração do short (s): fora dela o Telegram mostra um aviso */
+  duracaoMin: Number(env.DURACAO_MIN ?? 60),
+  duracaoMax: Number(env.DURACAO_MAX ?? 65),
   playlistSemanal: (env.PLAYLIST_SEMANAL ?? "1") === "1",
   canalNome: env.CANAL_NOME ?? "Cabe No Seu Time",
   maxTentativas: 3,

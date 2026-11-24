@@ -37,7 +37,8 @@ for (const nome of arquivos) {
   if (`${f.id}.json` !== nome) problemas.push(`nome do arquivo deveria ser ${f.id}.json`);
   if (f.id !== `${f.semana}-${String(f.posicao).padStart(2, "0")}`) problemas.push("id precisa terminar com a posição (ex.: -07)");
   const palavras = f.cenas.reduce((a, c) => a + c.narracao.split(/\s+/).length, 0);
-  if (palavras > 130) problemas.push(`narração longa demais (${palavras} palavras; máx. 130 para caber em 60 s)`);
+  if (palavras < 150 || palavras > 170)
+    problemas.push(`narração com ${palavras} palavras; use de 150 a 170 para o short ficar entre 60 e 65 s`);
   if (posicoes.has(f.posicao)) problemas.push(`posição #${f.posicao} repetida (${posicoes.get(f.posicao)})`);
   if (nomes.has(f.jogador.nome)) problemas.push(`jogador repetido (${nomes.get(f.jogador.nome)})`);
   posicoes.set(f.posicao, nome);

@@ -1,6 +1,6 @@
 # Cabe No Seu Time — pipeline de shorts de scout
 
-Toda segunda, um **top 10**: dez shorts de 45–60 s, do #10 ao #1, cada um analisando um jogador com números e fechando com "cabe no seu time?". Mesmo esqueleto da Novelinha (`r5-tech/daniel-gamer-yt`): voz Kokoro pt-BR, Remotion, worker com aprovação no Telegram e agendamento no YouTube.
+Toda segunda, um **top 10**: dez shorts de 60–65 s, do #10 ao #1, cada um analisando um jogador com números e fechando com "cabe no seu time?". Mesmo esqueleto da Novelinha (`r5-tech/daniel-gamer-yt`): voz Kokoro pt-BR, Remotion, worker com aprovação no Telegram e agendamento no YouTube.
 
 ```
 sábado    cérebro de scout (tarefa agendada no Claude) escolhe o tema, pesquisa e faz commit de fichas/<semana>/*.json
@@ -39,7 +39,7 @@ node scripts/render.mjs ../../data/prontos/2026-w48-01.json                    #
 node scripts/render.mjs ../../data/prontos/2026-w48-01.json --still=95,600     # só alguns frames
 npm run studio                                                                 # preview no navegador
 ```
-Com Chrome instalado: `CHROME_PATH=/usr/bin/google-chrome`. Medido aqui: 57 s de vídeo em ~2 min.
+Com Chrome instalado: `CHROME_PATH=/usr/bin/google-chrome`. Medido aqui: 64 s de vídeo em ~2 min.
 
 ## A ficha
 
@@ -53,7 +53,7 @@ Com Chrome instalado: `CHROME_PATH=/usr/bin/google-chrome`. Medido aqui: 57 s de
 | `pontoFraco` (obrigatória) | o lado ruim | `itens[]` |
 | `veredito` (última, obrigatória) | preço e a pergunta | `topo`, `preco`, `conversao`, `tag`, `pergunta` |
 
-Toda cena tem `narracao` (números por extenso; até 130 palavras no total). `fontes` é obrigatório: todo número do vídeo precisa de uma. `youtube.titulo/descricao/tags` são opcionais; sem eles o worker monta título, descrição com as fontes e hashtags.
+Toda cena tem `narracao` (números por extenso; 150 a 170 palavras no total, o que dá 60–65 s). O `preparar.mjs` calcula a duração real depois da voz, e o Telegram avisa com ⚠️ se o short sair da meta (`DURACAO_MIN`/`DURACAO_MAX`). `fontes` é obrigatório: todo número do vídeo precisa de uma. `youtube.titulo/descricao/tags` são opcionais; sem eles o worker monta título, descrição com as fontes e hashtags.
 
 ## VPS
 

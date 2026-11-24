@@ -3,7 +3,7 @@ import path from "node:path";
 import { dentroDaJanela, formatarLocal, horarioDoShort, proximoHorario } from "./agenda.mjs";
 import { config, log } from "./config.mjs";
 import { kv, sh } from "./db.mjs";
-import { caminhoVideo, hashArquivo, lerFicha, limparArquivos, preparar, renderizar } from "./etapas.mjs";
+import { caminhoPronto, caminhoVideo, hashArquivo, lerFicha, limparArquivos, preparar, renderizar } from "./etapas.mjs";
 import * as tg from "./telegram.mjs";
 import * as yt from "./youtube.mjs";
 
@@ -96,10 +96,17 @@ export async function processarProximo({ forcar = false } = {}) {
     const atual = sh.get(e.id);
     const f = lerFicha(atual.arquivo);
     const m = yt.metadados(f);
+    const dur = fs.existsSync(caminhoPronto(e.id)) ? lerFicha(caminhoPronto(e.id)).duracaoTotal : undefined;
+    const avisoDur =
+      dur === undefined
+        ? ""
+        : dur < config.duracaoMin || dur > config.duracaoMax
+          ? `⚠️ ${dur.toFixed(1)} s (meta ${config.duracaoMin}–${config.duracaoMax} s)`
+          : `⏱ ${dur.toFixed(1)} s`;
     const fontes = f.fontes.map((x) => `• <a href="${esc(x.url)}">${esc(x.titulo)}</a>`).join("\n");
     const msg = await tg.enviarVideo(
       atual.video,
-      `<b>#${f.posicao}</b> ${esc(f.jogador.nome)} · ${esc(f.tema)}\n\n<b>Título:</b> ${esc(m.titulo)}\n\n<b>Fontes</b>\n${fontes}`.slice(0, 1024),
+      `<b>#${f.posicao}</b> ${esc(f.jogador.nome)} · ${esc(f.tema)}\n${avisoDur}\n\n<b>Título:</b> ${esc(m.titulo)}\n\n<b>Fontes</b>\n${fontes}`.slice(0, 1024),
       tg.botoesRevisao(atual.id),
     );
     sh.atualizar(e.id, { status: "in_review", telegram_msg_id: msg.message_id, tentativas: 0, erro: null });

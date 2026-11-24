@@ -19,7 +19,7 @@
       "rotulo": "GOLS + ASSISTÊNCIAS",
       "sub": "NA SÉRIE B 2026",
       "alerta": "O PALMEIRAS NÃO QUER ELE DE VOLTA",
-      "narracao": "Vinte e duas participações em gol na Série B… e o Palmeiras não quer ele de volta."
+      "narracao": "Vinte e duas participações em gol na Série B… e o Palmeiras não quer ele de volta. Esse é o Rômulo, vinte e cinco anos. Cabe no seu time?"
     },
     {
       "tipo": "linhaDoTempo",
@@ -42,14 +42,14 @@
           "destaque": true
         }
       ],
-      "narracao": "Em dois mil e vinte e quatro, o Verdão comprou setenta por cento dele. Sem espaço com o Abel, voltou emprestado… e explodiu."
+      "narracao": "Em dois mil e vinte e quatro, o Verdão pagou seis milhões e trezentos mil reais por setenta por cento dele. Sem espaço com o Abel, voltou emprestado… e explodiu."
     },
     {
       "tipo": "numero",
       "valor": 12,
       "rotulo": "GOLS",
       "sub": "e 10 assistências",
-      "narracao": "Doze gols e dez assistências. Campeão da Série B."
+      "narracao": "Doze gols e dez assistências. E o Novorizontino terminou campeão da Série B."
     },
     {
       "tipo": "barras",
@@ -75,7 +75,7 @@
           "valor": 18.35
         }
       ],
-      "narracao": "Não foi sorte: ninguém na Série B criou tanto perigo. Mais de vinte e quatro gols e assistências esperados."
+      "narracao": "E não foi sorte: ninguém na Série B criou tanto perigo. Mais de vinte e quatro gols e assistências esperados, seis à frente do segundo colocado."
     },
     {
       "tipo": "destaque",
@@ -84,7 +84,7 @@
       "linha": "NO PALMEIRAS NO PAULISTÃO",
       "nota": "...e ele ficou de fora:",
       "alerta": "multa de R$ 1 mi por jogo",
-      "narracao": "Detalhe: o Novorizontino meteu quatro a zero no Palmeiras… sem ele. Uma multa de um milhão por jogo deixou o Rômulo de fora."
+      "narracao": "Detalhe: o Novorizontino meteu quatro a zero no Palmeiras no Paulistão… sem ele. Uma multa de um milhão por jogo deixou o Rômulo de fora."
     },
     {
       "tipo": "pontoFraco",
@@ -94,7 +94,7 @@
         "Já teve chance na Série A",
         "e não se firmou"
       ],
-      "narracao": "O ponto fraco: os números são de Série B. E na chance que teve na Série A, não se firmou."
+      "narracao": "O ponto fraco: os números são de Série B. E na chance que teve na Série A, ele não se firmou."
     },
     {
       "tipo": "veredito",
@@ -103,7 +103,7 @@
       "conversao": "≈ R$ 25 milhões",
       "tag": "Fluminense de olho",
       "pergunta": "CABE NO SEU TIME?",
-      "narracao": "O Palmeiras pede cinco milhões de dólares, e o Fluminense está de olho. Cabe no seu time?"
+      "narracao": "O Palmeiras pede cinco milhões de dólares, e o Fluminense está de olho. E aí: cabe no seu time?"
     }
   ],
   "fontes": [

@@ -1,6 +1,6 @@
 # Cérebro de scout — tarefa semanal
 
-Você é o scout do canal **Cabe No Seu Time**: shorts de 45 a 60 segundos que analisam um jogador com números e terminam com a pergunta "cabe no seu time?". Toda segunda o canal lança um **top 10**: dez shorts, do #10 ao #1. Sua tarefa é escolher o tema da semana, pesquisar os dez jogadores e entregar as dez fichas em JSON neste repositório. O worker da VPS renderiza e o Erick aprova no Telegram antes de publicar.
+Você é o scout do canal **Cabe No Seu Time**: shorts de 60 a 65 segundos que analisam um jogador com números e terminam com a pergunta "cabe no seu time?". Toda segunda o canal lança um **top 10**: dez shorts, do #10 ao #1. Sua tarefa é escolher o tema da semana, pesquisar os dez jogadores e entregar as dez fichas em JSON neste repositório. O worker da VPS renderiza e o Erick aprova no Telegram antes de publicar.
 
 ## 1. Semana
 - A ficha é da **próxima** segunda: `semana` = semana ISO dessa segunda, no formato `2026-w49`.
@@ -36,7 +36,7 @@ Estrutura de cenas, de 5 a 7:
 Regras da narração (vira voz sintética Kokoro em pt-BR):
 - Escreva números **por extenso** ("vinte e dois", "dois mil e vinte e quatro", "cinco milhões de dólares"). Os textos na tela podem ter algarismos.
 - Frases curtas, tom de comentarista empolgado mas sério. Reticências (…) criam pausa dramática.
-- Total de **até 130 palavras** por ficha (fica com menos de 60 s).
+- Total de **150 a 170 palavras** por ficha: é o que dá 60 a 65 s de vídeo com a voz em 1.15 (o exemplo tem 163 palavras e 63,9 s). O validador confere.
 - Nada de opinião sobre a vida pessoal do jogador. Só futebol, números e mercado.
 - Limites de tamanho dos textos de tela estão no schema; o validador acusa.
 
