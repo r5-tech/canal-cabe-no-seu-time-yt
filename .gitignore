@@ -1,0 +1,9 @@
+node_modules
+data/
+*.mp4
+*.wav
+.env
+
+# trilha e efeitos do canal (gerados por tools/gerar_sons.py) fazem parte do repositório
+!assets/**/*.wav
+__pycache__/

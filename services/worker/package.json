@@ -1,0 +1,11 @@
+{
+  "name": "@cabe/worker",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/main.mjs",
+    "cli": "node --disable-warning=ExperimentalWarning src/cli.mjs",
+    "youtube-auth": "node scripts/youtube-auth.mjs"
+  }
+}

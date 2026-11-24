@@ -1,0 +1,32 @@
+services:
+  tts:
+    build: ./services/tts
+    restart: unless-stopped
+    volumes:
+      - ./data/public:/data/public
+    environment:
+      OMP_NUM_THREADS: "2"
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 1500M
+
+  worker:
+    build:
+      context: .
+      dockerfile: services/worker/Dockerfile
+    restart: unless-stopped
+    depends_on: [tts]
+    env_file: services/worker/.env
+    environment:
+      TTS_URL: http://tts:8000
+    volumes:
+      - ./fichas:/app/fichas:ro   # o cron do host faz git pull; as fichas novas aparecem sozinhas
+      - ./data:/data
+    shm_size: 1gb          # Chrome do Remotion precisa de /dev/shm maior
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 4g

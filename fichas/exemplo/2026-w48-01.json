@@ -1,0 +1,127 @@
+{
+  "id": "2026-w48-01",
+  "semana": "2026-w48",
+  "posicao": 1,
+  "tema": "Barganhas para 2027",
+  "jogador": {
+    "nome": "Rômulo",
+    "clube": "Novorizontino (emp. Palmeiras)",
+    "posicao": "Meia",
+    "idade": 25
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "22",
+      "rotulo": "GOLS + ASSISTÊNCIAS",
+      "sub": "NA SÉRIE B 2026",
+      "alerta": "O PALMEIRAS NÃO QUER ELE DE VOLTA",
+      "narracao": "Vinte e duas participações em gol na Série B… e o Palmeiras não quer ele de volta."
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2024",
+          "linha1": "Palmeiras compra 70%",
+          "linha2": "por R$ 6,3 milhões"
+        },
+        {
+          "ano": "2025",
+          "linha1": "Sem espaço com Abel",
+          "linha2": "volta emprestado"
+        },
+        {
+          "ano": "2026",
+          "linha1": "No Novorizontino,",
+          "linha2": "explode e é campeão",
+          "destaque": true
+        }
+      ],
+      "narracao": "Em dois mil e vinte e quatro, o Verdão comprou setenta por cento dele. Sem espaço com o Abel, voltou emprestado… e explodiu."
+    },
+    {
+      "tipo": "numero",
+      "valor": 12,
+      "rotulo": "GOLS",
+      "sub": "e 10 assistências",
+      "narracao": "Doze gols e dez assistências. Campeão da Série B."
+    },
+    {
+      "tipo": "barras",
+      "titulo": "xG + xA",
+      "sub": "LÍDER DA SÉRIE B",
+      "decimais": 2,
+      "barras": [
+        {
+          "nome": "Rômulo",
+          "valor": 24.05,
+          "destaque": true
+        },
+        {
+          "nome": "Chrystian Barletta",
+          "valor": 18.37
+        },
+        {
+          "nome": "Dadá Belmonte",
+          "valor": 18.36
+        },
+        {
+          "nome": "Mikael",
+          "valor": 18.35
+        }
+      ],
+      "narracao": "Não foi sorte: ninguém na Série B criou tanto perigo. Mais de vinte e quatro gols e assistências esperados."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "4 × 0",
+      "linha": "NO PALMEIRAS NO PAULISTÃO",
+      "nota": "...e ele ficou de fora:",
+      "alerta": "multa de R$ 1 mi por jogo",
+      "narracao": "Detalhe: o Novorizontino meteu quatro a zero no Palmeiras… sem ele. Uma multa de um milhão por jogo deixou o Rômulo de fora."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Números de Série B",
+        "Já teve chance na Série A",
+        "e não se firmou"
+      ],
+      "narracao": "O ponto fraco: os números são de Série B. E na chance que teve na Série A, não se firmou."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "O PALMEIRAS PEDE",
+      "preco": "US$ 5 MI",
+      "conversao": "≈ R$ 25 milhões",
+      "tag": "Fluminense de olho",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "O Palmeiras pede cinco milhões de dólares, e o Fluminense está de olho. Cabe no seu time?"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "365Scores — destaques estatísticos da Série B 2026",
+      "url": "https://www.365scores.com/pt-br/news/magazine/jogadores-destaques-estatisticos-serie-b-2026/"
+    },
+    {
+      "titulo": "Rádio Bandeirantes — Palmeiras anuncia Rômulo (R$ 6,3 mi por 70%)",
+      "url": "https://www.band.com.br/radio-bandeirantes/noticias/palmeiras-anuncia-a-contratacao-meia-romulo-novorizontino-16668686"
+    },
+    {
+      "titulo": "Band — multa de R$ 1 mi para jogar contra o Palmeiras",
+      "url": "https://www.band.com.br/esportes/palmeiras-nao-deve-abrir-mao-de-multa-e-novorizontino-estuda-ter-romulo-nas-finais-do-paulistao-202603021227"
+    },
+    {
+      "titulo": "Netflu — Palmeiras pede US$ 5 mi; Fluminense interessado",
+      "url": "https://www.netflu.com.br/r-25-milhoes-fluminense-quer-meia-destaque-na-serie-b-veja-detalhes/"
+    }
+  ]
+}
