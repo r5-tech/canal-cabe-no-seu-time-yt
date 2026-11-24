@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Prepara uma VPS Ubuntu/Debian do zero e sobe o canal.
 # Uso (como root ou com sudo), uma única vez:
-#   curl -fsSL https://raw.githubusercontent.com/r5-tech/cabe-no-seu-time/main/deploy/setup-vps.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/r5-tech/canal-cabe-no-seu-time-yt/main/deploy/setup-vps.sh | bash
 # ou, com o repositório já clonado:  bash deploy/setup-vps.sh
 set -euo pipefail
 
-DIR=${DIR:-/opt/cabe-no-seu-time}
-REPO=${REPO:-https://github.com/r5-tech/cabe-no-seu-time.git}
+DIR=${DIR:-/opt/canal-cabe-no-seu-time-yt}
+REPO=${REPO:-https://github.com/r5-tech/canal-cabe-no-seu-time-yt.git}
 
 echo "==> Docker"
 if ! command -v docker >/dev/null; then

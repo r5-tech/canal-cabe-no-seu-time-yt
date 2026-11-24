@@ -58,8 +58,8 @@ Toda cena tem `narracao` (números por extenso; 150 a 170 palavras no total, o q
 ## VPS
 
 ```bash
-git clone https://github.com/r5-tech/cabe-no-seu-time.git /opt/cabe-no-seu-time
-bash /opt/cabe-no-seu-time/deploy/setup-vps.sh      # Docker, swap, .env em DRY_RUN, cron de git pull, sobe tudo
+git clone https://github.com/r5-tech/canal-cabe-no-seu-time-yt.git /opt/canal-cabe-no-seu-time-yt
+bash /opt/canal-cabe-no-seu-time-yt/deploy/setup-vps.sh      # Docker, swap, .env em DRY_RUN, cron de git pull, sobe tudo
 ```
 Telegram e YouTube se configuram igual à Novelinha (veja o README de lá). Diferenças:
 - O `youtube-auth.mjs` pede o escopo `youtube` (não só `youtube.upload`), porque cria a playlist da semana.
