@@ -18,6 +18,7 @@ Leia as notícias da semana antes de decidir. Bons temas são os que o torcedor 
 Linha editorial: **sair do óbvio**. Nada de lista de manchete (Neymar, Vini, Estêvão, Endrick...). O valor do canal é achar o nome antes dos outros. Evite repetir jogadores que já apareceram nas últimas 8 semanas (`fichas/*/`). A planilha "Cabe No Seu Time — Base de Pauta" (artifact do Erick) é uma fonte de ideias, não uma obrigação.
 
 ## 3. Pesquisa de cada jogador
+- **Comece pelos dados do repositório** quando o tema envolver Série B, C ou D: `dados/stats/<temporada>/serie-b.json`, `serie-c.json`, `serie-d.json` (gerados da API-Football; veja o README). Use `rankings.nota`, `rankings.participacoes`, `rankings.sub23Nota` etc. para achar nomes fora do óbvio e tirar números (jogos, minutos, gols, assistências, passes decisivos, nota média). Confira `coletaCompleta` e `atualizadoEm`: com coleta incompleta, o ranking não vale como "o melhor da liga". Cite como fonte `{"titulo": "API-Football — estatísticas da <liga> <temporada>", "url": "https://www.api-football.com"}`. A nota é a da API-Football: chame de "nota média", nunca de "nota Sofascore".
 - Use busca na web e leitura de páginas de notícia, sites de liga e de clube.
 - **Não faça scraping** de Sofascore, Transfermarkt, FotMob ou similares (fere os termos de uso deles). Números que aparecem em matérias que citam essas bases podem ser usados, com a matéria como fonte.
 - Todo número que aparece na ficha (cenas e narração) precisa estar numa das `fontes`. Na dúvida, deixe o número de fora.

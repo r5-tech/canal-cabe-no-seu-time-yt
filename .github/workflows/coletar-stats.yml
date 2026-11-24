@@ -1,0 +1,52 @@
+# Coleta diária de estatísticas da API-Football (plano free: 100 requisições/dia).
+# Precisa do secret API_FOOTBALL_KEY (Settings → Secrets and variables → Actions).
+# Cada execução gasta até ORCAMENTO requisições, retoma de onde parou e faz commit de dados/.
+name: coletar-stats
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # 03:17 em Brasília; a cota da API zera à meia-noite UTC
+  workflow_dispatch:
+    inputs:
+      comando:
+        description: "cobertura (1 requisição) ou coletar"
+        default: coletar
+      temporada:
+        description: "ano da temporada (vazio = ano atual)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coletar-stats
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      TEMPORADA: ${{ inputs.temporada }}
+      ORCAMENTO: "95"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Coletar
+        run: node tools/api-football.mjs ${{ inputs.comando || 'coletar' }}
+      - name: Compilar rankings
+        if: always()
+        run: node tools/api-football.mjs compilar
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "coletor-stats"
+          git config user.email "coletor-stats@users.noreply.github.com"
+          git add dados/
+          if git diff --cached --quiet; then echo "nada novo"; exit 0; fi
+          git commit -m "dados: coleta API-Football $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -97,3 +97,17 @@ Comandos no bot: `/status`, `/fila`, `/render`, `/pausar`, `/retomar`, `/aprovar
 
 ## Fontes de dados
 Sem scraping de Sofascore/Transfermarkt/FotMob (termos de uso). O cérebro usa matérias, sites de ligas e clubes, e cita tudo em `fontes`, que vai para a descrição do vídeo.
+
+### Estatísticas: API-Football (plano free)
+`tools/api-football.mjs` baixa as estatísticas de temporada de todos os jogadores das Séries B, C e D (`/players`, 20 por página) e compila rankings em `dados/stats/<temporada>/serie-b.json` etc.: nota média (ponderada por minutos, mínimo de metade dos jogos do mais assíduo), gols, assistências, passes decisivos, sub-23.
+
+- Roda todo dia pelo GitHub Actions (`.github/workflows/coletar-stats.yml`), gasta até 95 das 100 requisições do dia, retoma de onde parou e faz commit em `dados/`. A VPS recebe pelo `git pull` de sempre.
+- Uma carga completa das três séries leva uns 3 dias (a Série D, com 96 clubes, é a maior). Depois, cada liga é baixada de novo a cada 7 dias (`REFRESH_DIAS`).
+- Configuração: crie a conta grátis em dashboard.api-football.com e salve a chave no secret `API_FOOTBALL_KEY` do repositório. Primeiro rode o workflow à mão com `comando = cobertura` (1 requisição): o log mostra se cada série tem estatística de jogador (`players=true`).
+- A nota é a da API-Football, **não** a do Sofascore: no vídeo, "nota média" com a API-Football nas fontes.
+
+```bash
+API_FOOTBALL_KEY=... node tools/api-football.mjs cobertura
+API_FOOTBALL_KEY=... node tools/api-football.mjs coletar
+node tools/api-football.mjs compilar
+```
