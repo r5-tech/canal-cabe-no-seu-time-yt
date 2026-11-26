@@ -1,0 +1,177 @@
+{
+  "atualizadoEm": "2026-11-26T02:28:41.755Z",
+  "comoUsar": "Gerado pelo cérebro na VPS. Para a semana que você vai produzir: se 'pauta' existir, ela é o tema da semana. Se for null, escolha pelo momento, priorizando a 'fila' (sugestões do Erick) e o 'temaDaRotacao'.",
+  "semanas": [
+    {
+      "semana": "2026-w49",
+      "segunda": "2026-11-30",
+      "videoLongo": "2026-12-04",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 1,
+        "titulo": "Top 10 da Série B 2026: quem cabe no seu time?",
+        "tema": "series",
+        "temaNome": "Garimpo das séries",
+        "descricao": "Pauta pronta no projeto (pautas/top10-series-b-c-d-2026.md, semana 1). Atualizar Janderson, Mailton e Gustavo Coutinho depois dos playoffs.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "livre",
+      "temaDaRotacaoNome": "Livre"
+    },
+    {
+      "semana": "2026-w50",
+      "segunda": "2026-12-07",
+      "videoLongo": "2026-12-11",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 2,
+        "titulo": "Top 10 da Série C 2026: o garimpo da Terceirona",
+        "tema": "series",
+        "temaNome": "Garimpo das séries",
+        "descricao": "Pauta pronta no projeto (semana 2). Nenê é curiosidade, não scout de contratação: usar como fora da curva ou trocar por Denilson.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "sub23",
+      "temaDaRotacaoNome": "Sub-23 com potencial"
+    },
+    {
+      "semana": "2026-w51",
+      "segunda": "2026-12-14",
+      "videoLongo": "2026-12-18",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 3,
+        "titulo": "Top 10 da Série D 2026: a maior Série D da história",
+        "tema": "series",
+        "temaNome": "Garimpo das séries",
+        "descricao": "Pauta pronta no projeto (semana 3). Bônus: Alex Choco, hype x realidade.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "contrato",
+      "temaDaRotacaoNome": "Fim de contrato"
+    },
+    {
+      "semana": "2026-w52",
+      "segunda": "2026-12-21",
+      "videoLongo": "2026-12-24",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 4,
+        "titulo": "Top 10 que podem sair de graça na virada do ano",
+        "tema": "contrato",
+        "temaNome": "Fim de contrato",
+        "descricao": "Contratos que vencem em dezembro de 2026. Conferir renovações recentes antes de cada nome.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "series",
+      "temaDaRotacaoNome": "Garimpo das séries"
+    },
+    {
+      "semana": "2026-w53",
+      "segunda": "2026-12-28",
+      "videoLongo": "2026-12-31",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 5,
+        "titulo": "Top 10 brasileiros na Europa em 2026: o balanço do ano",
+        "tema": "mercado",
+        "temaNome": "Mercado em alta",
+        "descricao": "Fora do óbvio: ligas secundárias (Portugal, Holanda, Bélgica, Turquia...), nada de lista de manchete.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "mercado",
+      "temaDaRotacaoNome": "Mercado em alta"
+    },
+    {
+      "semana": "2027-w01",
+      "segunda": "2027-01-04",
+      "videoLongo": "2027-01-08",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 6,
+        "titulo": "Top 10 sub-20 pra ficar de olho na Copinha",
+        "tema": "sub23",
+        "temaNome": "Sub-23 com potencial",
+        "descricao": "Base fora do eixo, de preferência clubes fora dos 12 grandes.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "sub23",
+      "temaDaRotacaoNome": "Sub-23 com potencial"
+    },
+    {
+      "semana": "2027-w02",
+      "segunda": "2027-01-11",
+      "videoLongo": "2027-01-15",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 7,
+        "titulo": "Top 10 nomes que o seu time ainda pode contratar",
+        "tema": "especial",
+        "temaNome": "Especial",
+        "descricao": "Especial de janela de transferências.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "contrato",
+      "temaDaRotacaoNome": "Fim de contrato"
+    },
+    {
+      "semana": "2027-w03",
+      "segunda": "2027-01-18",
+      "videoLongo": "2027-01-22",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 8,
+        "titulo": "Top 10 mais especulados da janela: vale o preço?",
+        "tema": "mercado",
+        "temaNome": "Mercado em alta",
+        "descricao": "Nomes em especulação na semana, com os números que justificam (ou não) o investimento.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "series",
+      "temaDaRotacaoNome": "Garimpo das séries"
+    },
+    {
+      "semana": "2027-w04",
+      "segunda": "2027-01-25",
+      "videoLongo": "2027-01-29",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 9,
+        "titulo": "Top 10 revelações da Copinha",
+        "tema": "sub23",
+        "temaNome": "Sub-23 com potencial",
+        "descricao": "Fechamento da Copinha.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "mercado",
+      "temaDaRotacaoNome": "Mercado em alta"
+    },
+    {
+      "semana": "2027-w05",
+      "segunda": "2027-02-01",
+      "videoLongo": "2027-02-05",
+      "fichasNoRepositorio": false,
+      "pauta": {
+        "id": 10,
+        "titulo": "Top 10 estrangeiros do futebol brasileiro que cabem no seu time",
+        "tema": "mercado",
+        "temaNome": "Mercado em alta",
+        "descricao": "Sugerida pelo Erick. Base: Série A 2026; corte por idade e valor de mercado.",
+        "sugeridaPor": "Erick",
+        "status": "agendada"
+      },
+      "temaDaRotacao": "sub23",
+      "temaDaRotacaoNome": "Sub-23 com potencial"
+    }
+  ],
+  "fila": []
+}

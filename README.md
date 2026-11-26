@@ -3,7 +3,8 @@
 Toda segunda, um **top 10**: dez shorts de 60–65 s, do #10 ao #1, cada um analisando um jogador com números e fechando com "cabe no seu time?". Mesmo esqueleto da Novelinha (`r5-tech/daniel-gamer-yt`): voz Kokoro pt-BR, Remotion, worker com aprovação no Telegram e agendamento no YouTube.
 
 ```
-sábado    cérebro de scout (tarefa agendada no Claude) escolhe o tema, pesquisa e faz commit de fichas/<semana>/*.json
+sempre    você sugere e agenda pautas no cérebro (front no celular, ou /pauta no Telegram); a VPS publica cerebro/agenda.json
+sábado    cérebro de scout (tarefa agendada no Claude) lê a agenda, pesquisa e faz commit de fichas/<semana>/*.json
           a VPS faz git pull a cada 10 min
 madrugada worker gera voz + vídeo dos 10, um por vez, e manda cada um pro Telegram
 domingo   você aprova (um a um ou "✅ Aprovar os 10 da semana")
@@ -18,6 +19,8 @@ canal-cabe-no-seu-time-yt/
 ├─ fichas/<semana>/<semana>-NN.json   # uma ficha por short (NN = posição no top 10)
 ├─ fichas/exemplo/                    # ficha modelo (Rômulo); o worker ignora esta pasta
 ├─ cerebro/PROMPT.md                  # instruções da tarefa semanal de scout
+├─ cerebro/agenda.json                # gerado pela VPS: pauta de cada semana + fila de sugestões
+├─ cerebro/programacao-inicial.json   # pautas carregadas no primeiro start do cérebro
 ├─ packages/video/                    # Remotion: composição ShortScout
 │  ├─ src/schema.ts                   # schema zod da ficha (tipos de cena e limites de texto)
 │  ├─ src/Cenas.tsx                   # gancho, linhaDoTempo, numero, barras, destaque, pontoFraco, veredito
@@ -25,6 +28,7 @@ canal-cabe-no-seu-time-yt/
 │  └─ scripts/{preparar,render}.mjs   # voz → data/prontos ; vídeo → data/out
 ├─ services/tts/                      # Kokoro (o mesmo da Novelinha)
 ├─ services/worker/                   # fila, Telegram, YouTube
+├─ services/cerebro/                  # pautas em SQLite + front mínimo (porta 8080, só no Tailscale)
 └─ tools/
    ├─ validar-fichas.mjs              # valida as 10 fichas da semana antes do commit
    └─ gerar_sons.py                   # trilha scout-01 e efeitos (procedurais, sem direitos de terceiros)
@@ -93,7 +97,23 @@ O worker renova o token sozinho toda semana. Se a renovação falhar, ele avisa 
 Se o upload direto der erro no login do Instagram, a alternativa documentada pela Meta é o login do Facebook: conta do Instagram ligada a uma Página, token de Página e `IG_HOST=graph.facebook.com`.
 Limite da Meta: 100 posts via API por 24 h (o top 10 usa 10).
 
-Comandos no bot: `/status`, `/fila`, `/render`, `/pausar`, `/retomar`, `/aprovar_semana 2026-w49`, `/retentar 2026-w49-07`, `/ig_retentar 2026-w49-07`, `/erro 2026-w49-07`.
+Comandos no bot: `/pauta sua ideia` (manda para a fila do cérebro), `/agenda`, `/status`, `/fila`, `/render`, `/pausar`, `/retomar`, `/aprovar_semana 2026-w49`, `/retentar 2026-w49-07`, `/ig_retentar 2026-w49-07`, `/erro 2026-w49-07`.
+
+## Cérebro (pautas)
+
+O `services/cerebro` guarda as pautas num SQLite (`data/cerebro.db`) e mostra um front mínimo, feito para o celular: as próximas 10 semanas (com a pauta de cada uma ou o tema da rotação), o formulário para sugerir, a fila de sugestões e o histórico. Uma pauta anda sozinha: **sugerida → agendada → em produção** (quando as fichas da semana chegam no repositório) **→ publicada** (quando o worker publica os shorts da semana).
+
+A tarefa semanal do Claude roda na nuvem e só enxerga o repositório, então o cérebro exporta `cerebro/agenda.json` a cada mudança, e o `deploy/sincronizar-repo.sh` (cron de 10 em 10 min) faz commit e push dele. O pull continua pelo https público; o push vai por SSH com uma deploy key.
+
+No primeiro start com o banco vazio, o cérebro carrega `cerebro/programacao-inicial.json` (a programação até fevereiro de 2027).
+
+### Configurar na VPS (uma vez)
+1. **Deploy key:** rode de novo `bash deploy/setup-vps.sh` (é idempotente). Ele troca o cron de `git pull` pelo `sincronizar-repo.sh` e gera `/root/.ssh/cabe_deploy`. Cadastre a chave pública que ele imprime em GitHub → *Settings → Deploy keys → Add deploy key*, marcando **Allow write access**.
+2. **Tailscale na VPS:** `curl -fsSL https://tailscale.com/install.sh | sh && tailscale up`, e pegue o IP com `tailscale ip -4` (algo como `100.x.y.z`).
+3. **Porta só no Tailscale:** crie (ou edite) o `.env` da raiz do repositório com `CEREBRO_BIND=100.x.y.z` e suba: `docker compose up -d --build cerebro worker`.
+4. **Celular:** instale o app do Tailscale com a mesma conta e abra `http://100.x.y.z:8080`. Dica: adicione à tela inicial.
+
+Sem `CEREBRO_BIND`, a porta abre só em `127.0.0.1` (nada exposto). Para conferir o export: `cat cerebro/agenda.json` e `git log -3 -- cerebro/agenda.json`.
 
 ## Fontes de dados
 Sem scraping de Sofascore/Transfermarkt/FotMob (termos de uso). O cérebro usa matérias, sites de ligas e clubes, e cita tudo em `fontes`, que vai para a descrição do vídeo.

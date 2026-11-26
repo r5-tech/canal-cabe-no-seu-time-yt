@@ -1,0 +1,62 @@
+[
+  {
+    "titulo": "Top 10 da Série B 2026: quem cabe no seu time?",
+    "tema": "series",
+    "descricao": "Pauta pronta no projeto (pautas/top10-series-b-c-d-2026.md, semana 1). Atualizar Janderson, Mailton e Gustavo Coutinho depois dos playoffs.",
+    "semana": "2026-w49"
+  },
+  {
+    "titulo": "Top 10 da Série C 2026: o garimpo da Terceirona",
+    "tema": "series",
+    "descricao": "Pauta pronta no projeto (semana 2). Nenê é curiosidade, não scout de contratação: usar como fora da curva ou trocar por Denilson.",
+    "semana": "2026-w50"
+  },
+  {
+    "titulo": "Top 10 da Série D 2026: a maior Série D da história",
+    "tema": "series",
+    "descricao": "Pauta pronta no projeto (semana 3). Bônus: Alex Choco, hype x realidade.",
+    "semana": "2026-w51"
+  },
+  {
+    "titulo": "Top 10 que podem sair de graça na virada do ano",
+    "tema": "contrato",
+    "descricao": "Contratos que vencem em dezembro de 2026. Conferir renovações recentes antes de cada nome.",
+    "semana": "2026-w52"
+  },
+  {
+    "titulo": "Top 10 brasileiros na Europa em 2026: o balanço do ano",
+    "tema": "mercado",
+    "descricao": "Fora do óbvio: ligas secundárias (Portugal, Holanda, Bélgica, Turquia...), nada de lista de manchete.",
+    "semana": "2026-w53"
+  },
+  {
+    "titulo": "Top 10 sub-20 pra ficar de olho na Copinha",
+    "tema": "sub23",
+    "descricao": "Base fora do eixo, de preferência clubes fora dos 12 grandes.",
+    "semana": "2027-w01"
+  },
+  {
+    "titulo": "Top 10 nomes que o seu time ainda pode contratar",
+    "tema": "especial",
+    "descricao": "Especial de janela de transferências.",
+    "semana": "2027-w02"
+  },
+  {
+    "titulo": "Top 10 mais especulados da janela: vale o preço?",
+    "tema": "mercado",
+    "descricao": "Nomes em especulação na semana, com os números que justificam (ou não) o investimento.",
+    "semana": "2027-w03"
+  },
+  {
+    "titulo": "Top 10 revelações da Copinha",
+    "tema": "sub23",
+    "descricao": "Fechamento da Copinha.",
+    "semana": "2027-w04"
+  },
+  {
+    "titulo": "Top 10 estrangeiros do futebol brasileiro que cabem no seu time",
+    "tema": "mercado",
+    "descricao": "Sugerida pelo Erick. Base: Série A 2026; corte por idade e valor de mercado.",
+    "semana": "2027-w05"
+  }
+]

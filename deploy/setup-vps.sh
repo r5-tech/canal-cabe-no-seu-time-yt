@@ -35,9 +35,20 @@ if [ ! -f services/worker/.env ]; then
   echo "Preencha TELEGRAM_*, YT_* e troque para DRY_RUN=0 quando estiver tudo certo."
 fi
 
-echo "==> Cron: git pull a cada 10 min (é por aqui que chegam as fichas da semana)"
-CRON="*/10 * * * * cd $DIR && git pull --ff-only -q >> $DIR/data/git-pull.log 2>&1"
-( crontab -l 2>/dev/null | grep -v "$DIR && git pull" ; echo "$CRON" ) | crontab -
+echo "==> Cron: sincroniza o repositório a cada 10 min (chegam as fichas; sai a agenda do cérebro)"
+CRON="*/10 * * * * DIR=$DIR bash $DIR/deploy/sincronizar-repo.sh >> $DIR/data/git-pull.log 2>&1"
+( crontab -l 2>/dev/null | grep -v "$DIR && git pull" | grep -v "sincronizar-repo.sh" ; echo "$CRON" ) | crontab -
+
+if [ ! -f /root/.ssh/cabe_deploy ]; then
+  echo "==> Deploy key do cérebro (push do cerebro/agenda.json)"
+  mkdir -p /root/.ssh && chmod 700 /root/.ssh
+  ssh-keygen -q -t ed25519 -N "" -C "cerebro@vps" -f /root/.ssh/cabe_deploy
+  echo
+  echo "Cadastre esta chave em GitHub → repositório → Settings → Deploy keys → Add deploy key,"
+  echo "marcando 'Allow write access':"
+  cat /root/.ssh/cabe_deploy.pub
+  echo
+fi
 
 mkdir -p data
 echo "==> Subindo containers (o primeiro build baixa o modelo de voz e o Chrome; leva alguns minutos)"

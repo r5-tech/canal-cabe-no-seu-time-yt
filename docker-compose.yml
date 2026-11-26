@@ -21,6 +21,7 @@ services:
     env_file: services/worker/.env
     environment:
       TTS_URL: http://tts:8000
+      CEREBRO_URL: http://cerebro:8080
     volumes:
       - ./fichas:/app/fichas:ro   # o cron do host faz git pull; as fichas novas aparecem sozinhas
       - ./data:/data
@@ -30,3 +31,23 @@ services:
         limits:
           cpus: "2"
           memory: 4g
+
+  # Cérebro: pautas em SQLite (data/cerebro.db) + front mínimo.
+  # Exporta cerebro/agenda.json; o deploy/sincronizar-repo.sh faz commit e push.
+  # A porta só abre no IP do Tailscale: CEREBRO_BIND=100.x.y.z no .env da raiz.
+  cerebro:
+    build:
+      context: .
+      dockerfile: services/cerebro/Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./fichas:/repo/fichas:ro   # fichas da semana commitadas = pauta em produção
+      - ./cerebro:/repo/cerebro    # agenda.json e programacao-inicial.json
+      - ./data:/data               # cerebro.db; lê o worker.db (só leitura) para saber o que foi publicado
+    ports:
+      - "${CEREBRO_BIND:-127.0.0.1}:${CEREBRO_PORTA:-8080}:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256m

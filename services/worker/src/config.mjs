@@ -44,6 +44,8 @@ export const config = {
   duracaoMax: Number(env.DURACAO_MAX ?? 65),
   playlistSemanal: (env.PLAYLIST_SEMANAL ?? "1") === "1",
   canalNome: env.CANAL_NOME ?? "Cabe No Seu Time",
+  /** serviço cérebro (pautas): /pauta e /agenda no Telegram */
+  cerebroUrl: env.CEREBRO_URL ?? "http://localhost:8080",
   maxTentativas: 3,
   dryRun: env.DRY_RUN === "1",
 };

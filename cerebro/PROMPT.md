@@ -7,8 +7,13 @@ Você é o scout do canal **Cabe No Seu Time**: shorts de 60 a 65 segundos que a
 - Pasta: `fichas/<semana>/`. Arquivos: `<semana>-01.json` até `<semana>-10.json`, onde o número é a `posicao` (01 = o #1, que fecha a série).
 - Se a pasta já existir com fichas, não sobrescreva: avise e pare.
 
-## 2. Tema da semana (você decide pelo momento)
-Leia as notícias da semana antes de decidir. Bons temas são os que o torcedor está discutindo agora:
+## 2. Tema da semana
+**Primeiro, leia `cerebro/agenda.json`** (exportado pelo cérebro da VPS, onde o Erick agenda e sugere pautas). Ache a entrada de `semanas` com a `semana` que você vai produzir:
+- **`pauta` preenchida**: esse é o tema da semana. Siga o `titulo` e a `descricao` (recorte, liga, idade, o que evitar). Você ainda escolhe os dez nomes e a ordem; se a pauta for inviável (por exemplo, sem números com fonte para dez jogadores), produza o mais próximo possível e explique no resumo final.
+- **`pauta` nula**: você decide pelo momento (abaixo). Antes, olhe a `fila` (sugestões do Erick, mais antigas primeiro) e o `temaDaRotacao`: se uma pauta da fila couber no momento, use-a e cite o `id` dela no resumo final, para o Erick agendá-la no front.
+- Se o `atualizadoEm` tiver mais de 14 dias, avise no resumo: o cérebro da VPS pode estar parado.
+
+Para decidir pelo momento, leia as notícias da semana. Bons temas são os que o torcedor está discutindo agora:
 - **Barganhas de fim de contrato / empréstimos acabando** (forte de outubro a janeiro e em junho).
 - **Base fora do eixo**: sub-20/sub-21 de clubes fora dos 12 grandes, ou que estouraram num torneio de base.
 - **Brasileiros fora do radar** em ligas secundárias (Portugal, Holanda, Bélgica, Turquia, Rússia, Ucrânia, Grécia, MLS, Japão...).
@@ -56,4 +61,6 @@ git add fichas/<semana>
 git commit -m "semana <semana>: top 10 <tema>"
 git push origin main
 ```
-Termine com um resumo curto para o Erick: o tema e por que agora, a lista do #10 ao #1 (nome, clube, uma linha de tese) e qualquer número que ficou de fora por falta de fonte.
+Não edite `cerebro/agenda.json`: quem escreve nele é a VPS (o status da pauta vira "em produção" sozinho quando as fichas da semana chegam).
+
+Termine com um resumo curto para o Erick: o tema (e o id da pauta, se veio do cérebro) e por que agora, a lista do #10 ao #1 (nome, clube, uma linha de tese) e qualquer número que ficou de fora por falta de fonte.

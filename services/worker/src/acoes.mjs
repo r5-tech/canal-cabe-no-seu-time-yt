@@ -250,9 +250,49 @@ export function statusTexto() {
   ].join("\n");
 }
 
+/** Cérebro (services/cerebro): fila de pautas e agenda das próximas semanas. */
+async function cerebro(caminho, corpo) {
+  const r = await fetch(`${config.cerebroUrl}${caminho}`, {
+    method: corpo ? "POST" : "GET",
+    ...(corpo ? { headers: { "content-type": "application/json" }, body: JSON.stringify(corpo) } : {}),
+    signal: AbortSignal.timeout(10_000),
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.erro ?? `cérebro respondeu ${r.status}`);
+  return j;
+}
+
+const diaMes = (ymd) => `${ymd.slice(8, 10)}/${ymd.slice(5, 7)}`;
+
+async function sugerirPauta(texto) {
+  if (!texto) return "uso: /pauta Top 10 estrangeiros do futebol brasileiro que cabem no seu time";
+  try {
+    const p = await cerebro("/api/pautas", { titulo: texto, origem: "telegram" });
+    return `🧠 Pauta #${p.id} na fila do cérebro:\n<b>${esc(p.titulo)}</b>\nAgende uma semana no front, ou deixe o cérebro de sábado escolher.`;
+  } catch (e) {
+    return `⚠️ Não consegui falar com o cérebro: ${esc(e.message)}`;
+  }
+}
+
+async function agendaTexto() {
+  try {
+    const a = await cerebro("/api/agenda");
+    const linhas = a.semanas.map(
+      (s) => `• ${diaMes(s.segunda)}: ${s.pauta ? esc(s.pauta.titulo) : `<i>livre (rotação: ${esc(s.temaDaRotacaoNome)})</i>`}`,
+    );
+    return `<b>Agenda</b>\n${linhas.join("\n")}\n\n🧠 ${a.fila.length} pauta(s) na fila`;
+  } catch (e) {
+    return `⚠️ Não consegui falar com o cérebro: ${esc(e.message)}`;
+  }
+}
+
 export async function comando(texto) {
   const [cmd, arg] = texto.split(/\s+/);
   switch (cmd) {
+    case "/pauta":
+      return sugerirPauta(texto.slice(cmd.length).trim());
+    case "/agenda":
+      return agendaTexto();
     case "/status":
     case "/start":
       return statusTexto();
@@ -293,6 +333,6 @@ export async function comando(texto) {
       return txt ? `<code>${esc(txt.slice(0, 3500))}</code>` : "sem erro registrado";
     }
     default:
-      return "Comandos: /status /fila /render /pausar /retomar /aprovar_semana 2026-w48 /retentar 2026-w48-07 /ig_retentar 2026-w48-07 /erro 2026-w48-07";
+      return "Comandos: /pauta sua ideia · /agenda · /status /fila /render /pausar /retomar /aprovar_semana 2026-w48 /retentar 2026-w48-07 /ig_retentar 2026-w48-07 /erro 2026-w48-07";
   }
 }

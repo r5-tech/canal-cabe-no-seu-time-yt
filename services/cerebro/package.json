@@ -1,0 +1,10 @@
+{
+  "name": "@cabe/cerebro",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/main.mjs",
+    "exportar": "node --disable-warning=ExperimentalWarning src/main.mjs --exportar"
+  }
+}
