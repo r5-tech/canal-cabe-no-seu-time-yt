@@ -1,12 +1,12 @@
 {
-  "atualizadoEm": "2026-11-26T02:28:41.755Z",
+  "atualizadoEm": "2026-11-27T21:30:20.422Z",
   "comoUsar": "Gerado pelo cérebro na VPS. Para a semana que você vai produzir: se 'pauta' existir, ela é o tema da semana. Se for null, escolha pelo momento, priorizando a 'fila' (sugestões do Erick) e o 'temaDaRotacao'.",
   "semanas": [
     {
       "semana": "2026-w49",
       "segunda": "2026-11-30",
       "videoLongo": "2026-12-04",
-      "fichasNoRepositorio": false,
+      "fichasNoRepositorio": true,
       "pauta": {
         "id": 1,
         "titulo": "Top 10 da Série B 2026: quem cabe no seu time?",
@@ -14,7 +14,7 @@
         "temaNome": "Garimpo das séries",
         "descricao": "Pauta pronta no projeto (pautas/top10-series-b-c-d-2026.md, semana 1). Atualizar Janderson, Mailton e Gustavo Coutinho depois dos playoffs.",
         "sugeridaPor": "Erick",
-        "status": "agendada"
+        "status": "em_producao"
       },
       "temaDaRotacao": "livre",
       "temaDaRotacaoNome": "Livre"
