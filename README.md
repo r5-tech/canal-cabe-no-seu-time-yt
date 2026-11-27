@@ -26,6 +26,7 @@ canal-cabe-no-seu-time-yt/
 │  ├─ src/Cenas.tsx                   # gancho, linhaDoTempo, numero, barras, destaque, pontoFraco, veredito
 │  ├─ src/ShortScout.tsx              # cabeçalho TOP 10 · #N, legenda palavra a palavra, cartela final
 │  └─ scripts/{preparar,render}.mjs   # voz → data/prontos ; vídeo → data/out
+├─ identidade/                        # avatar, banner, marca d'água, destaques e textos do canal
 ├─ services/tts/                      # Kokoro (o mesmo da Novelinha)
 ├─ services/worker/                   # fila, Telegram, YouTube
 ├─ services/cerebro/                  # pautas em SQLite + front mínimo (porta 8080, só no Tailscale)
