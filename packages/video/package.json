@@ -6,7 +6,8 @@
     "studio": "remotion studio",
     "render": "node scripts/render.mjs",
     "preparar": "node scripts/preparar.mjs",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "identidade": "node scripts/identidade.mjs"
   },
   "dependencies": {
     "@fontsource/anton": "^5.2.0",
