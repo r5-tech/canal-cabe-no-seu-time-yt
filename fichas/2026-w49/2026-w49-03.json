@@ -1,0 +1,133 @@
+{
+  "id": "2026-w49-03",
+  "semana": "2026-w49",
+  "posicao": 3,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Janderson",
+    "clube": "Vila Nova",
+    "posicao": "Atacante",
+    "idade": 27
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "19",
+      "rotulo": "PARTICIPAÇÕES EM GOL",
+      "sub": "NA SÉRIE B 2026",
+      "alerta": "NA SELEÇÃO DO CAMPEONATO",
+      "narracao": "Dezenove participações em gol na Série B… e vaga na seleção do campeonato. Esse é o Janderson, vinte e sete anos, do Vila Nova. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2019",
+          "linha1": "Sobe no Corinthians",
+          "linha2": "e roda por empréstimos"
+        },
+        {
+          "ano": "2025",
+          "linha1": "Acesso com o Remo",
+          "linha2": "2 gols e 6 assistências"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Vila Nova em definitivo",
+          "linha2": "10 gols e 9 assistências",
+          "destaque": true
+        }
+      ],
+      "narracao": "Saiu do Corinthians, rodou por empréstimos e passou pelo Ceará. Em dois mil e vinte e cinco subiu com o Remo… e no Vila Nova virou outro jogador."
+    },
+    {
+      "tipo": "barras",
+      "titulo": "PARTICIPAÇÕES",
+      "sub": "SELEÇÃO DA SÉRIE B 2026",
+      "decimais": 0,
+      "barras": [
+        {
+          "nome": "Rômulo",
+          "valor": 22
+        },
+        {
+          "nome": "Mikael",
+          "valor": 22
+        },
+        {
+          "nome": "Robson",
+          "valor": 21
+        },
+        {
+          "nome": "Janderson",
+          "valor": 19,
+          "destaque": true
+        },
+        {
+          "nome": "Crystopher",
+          "valor": 14
+        }
+      ],
+      "narracao": "Na seleção da Série B, só três jogadores participaram de mais gols. E entre eles, em assistências, só o Rômulo passou dele."
+    },
+    {
+      "tipo": "numero",
+      "valor": 9,
+      "rotulo": "ASSISTÊNCIAS",
+      "sub": "e 10 gols na Série B",
+      "narracao": "Dez gols e nove assistências. Um atacante que faz e que serve."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "20%",
+      "linha": "DO PASSE AINDA É DO CEARÁ",
+      "nota": "se o Vila vender, o Vozão ganha",
+      "narracao": "Detalhe: o Ceará ainda tem vinte por cento dos direitos dele. Se o Vila vender, o Vozão também ganha."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Só 3 gols em 2025",
+        "Um ano fora da curva?"
+      ],
+      "narracao": "O ponto fraco: em dois mil e vinte e cinco, somando Atlético-GO e Remo, foram só três gols. É uma temporada fora da curva… ou o novo normal?"
+    },
+    {
+      "tipo": "veredito",
+      "topo": "CONTRATO ATÉ",
+      "preco": "NOV/2027",
+      "tag": "Vila Nova em definitivo",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "Contrato com o Vila até novembro de dois mil e vinte e sete, valor nunca divulgado. Dezenove gols em que ele botou o pé… cabe no seu time?",
+      "conversao": "valor nunca divulgado"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Diário do Nordeste — seleção da Série B 2026",
+      "url": "https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/alexandre-mota/sele%C3%A7%C3%A3o-da-s%C3%A9rie-b-de-2026-veja-os-melhores-jogadores-1.3806988"
+    },
+    {
+      "titulo": "Esporte Goiano — Vila Nova anuncia Janderson por dois anos",
+      "url": "https://esportegoiano.com.br/vila-nova-divulga-contratacao-atacante-janderson-dois-anos/"
+    },
+    {
+      "titulo": "Diário do Nordeste — Ceará acerta ida de Janderson ao Vila Nova",
+      "url": "https://diariodonordeste.verdesmares.com.br/jogada/ceara-acerta-ida-de-janderson-para-o-vila-nova-go-em-definitivo-1.3722492"
+    },
+    {
+      "titulo": "Sou Tigrão — Janderson, protagonista do Vila Nova",
+      "url": "https://soutigrao.com/noticias-do-vila-nova/atacante-vila-nova-forte/"
+    },
+    {
+      "titulo": "Wikipedia — Janderson (futebolista, 1999)",
+      "url": "https://en.wikipedia.org/wiki/Janderson_(footballer,_born_February_1999)"
+    }
+  ]
+}

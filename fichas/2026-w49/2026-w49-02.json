@@ -1,0 +1,144 @@
+{
+  "id": "2026-w49-02",
+  "semana": "2026-w49",
+  "posicao": 2,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Mikael",
+    "clube": "CRB",
+    "posicao": "Centroavante",
+    "idade": 27
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "18",
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "ARTILHEIRO ISOLADO",
+      "alerta": "E O CRB FICOU FORA DO G6",
+      "narracao": "Dezoito gols, artilheiro isolado da Série B… e o CRB ficou fora do G6. Esse é o Mikael, vinte e sete anos. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2018",
+          "linha1": "Profissional no Sport",
+          "linha2": "cria da base"
+        },
+        {
+          "ano": "2022",
+          "linha1": "Salernitana e Inter",
+          "linha2": "1 jogo pelo Colorado"
+        },
+        {
+          "ano": "2025",
+          "linha1": "CRB, acima do peso",
+          "linha2": "e voltando de cirurgia"
+        },
+        {
+          "ano": "2026",
+          "linha1": "28 gols no ano",
+          "linha2": "vice-artilheiro do Brasil",
+          "destaque": true
+        }
+      ],
+      "narracao": "Cria do Sport, passou por Salernitana e Inter… e chegou ao CRB em dois mil e vinte e cinco acima do peso, voltando de cirurgia. Em dois mil e vinte e seis, já são vinte e oito gols."
+    },
+    {
+      "tipo": "barras",
+      "titulo": "ARTILHARIA",
+      "sub": "SÉRIE B 2026",
+      "decimais": 0,
+      "barras": [
+        {
+          "nome": "Mikael",
+          "valor": 18,
+          "destaque": true
+        },
+        {
+          "nome": "Robson",
+          "valor": 17
+        },
+        {
+          "nome": "Gustavo Coutinho",
+          "valor": 15
+        },
+        {
+          "nome": "Perotti",
+          "valor": 15
+        },
+        {
+          "nome": "Chrystian Barletta",
+          "valor": 14
+        }
+      ],
+      "narracao": "Na artilharia, ele terminou na frente do Robson, de Gustavo Coutinho, de Perotti e de Barletta."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "0,63",
+      "linha": "GOL POR JOGO EM MARÇO",
+      "nota": "melhor média das Séries A e B",
+      "narracao": "Detalhe: no fim de março ele tinha a melhor média de gols das Séries A e B somadas, à frente de Calleri e Carlos Vinícius."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Set. a nov.: sem gol",
+        "com a bola rolando",
+        "Só 1 gol, de pênalti"
+      ],
+      "narracao": "O ponto fraco: de setembro a novembro, ficou sem marcar com a bola rolando. O único gol foi de pênalti."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "MULTA PARA SAIR",
+      "preco": "€ 2 MI",
+      "tag": "São Paulo já foi recusado",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "O CRB já recusou o São Paulo, e a multa é de dois milhões de euros. Ele avisa: só sai se o CRB ganhar também. Barato para o artilheiro da Série B? Cabe no seu time?",
+      "conversao": "contrato até 2027"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Revista Oeste — artilharia final da Série B 2026",
+      "url": "https://revistaoeste.com/esporte/artilheiros-serie-b-2026-ranking-final-goleadores/"
+    },
+    {
+      "titulo": "Imirante — de Bacabal ao topo da artilharia do Brasil",
+      "url": "https://m.imirante.com/esporte/sao-luis/2026/09/16/maranhense-ocupa-topo-da-artilharia-do-brasil-em-2026"
+    },
+    {
+      "titulo": "br104 — Mikael volta a marcar antes da última rodada",
+      "url": "https://www.br104.com.br/esporte/cidades/mikael-volta-a-marcar-e-aumenta-confianca-do-crb-para-ultima-rodada"
+    },
+    {
+      "titulo": "TNH1 — 'só vou sair se o CRB ganhar também'",
+      "url": "https://www.tnh1.com.br/noticia/nid/se-acontecer-so-vou-sair-se-o-crb-ganhar-tambem-diz-mikael-sobre-propostas/"
+    },
+    {
+      "titulo": "TNH1 — sondagens e multa de € 2 milhões",
+      "url": "https://www.tnh1.com.br/noticia/nid/artilheiro-do-brasil-mikael-e-exaltado-na-web-em-meio-as-sondagens-no-crb-a-vida-da-muitas-voltas/"
+    },
+    {
+      "titulo": "TNH1 — melhor média de gols das Séries A e B",
+      "url": "https://www.tnh1.com.br/noticia/nid/atacante-do-crb-tem-melhor-media-dentre-todos-os-jogadores-das-series-a-e-b/"
+    },
+    {
+      "titulo": "Lance! — Olheiro: destaques da Série B no mercado",
+      "url": "https://www.lance.com.br/futebol-nacional/olheiro-lance-conheca-os-destaques-da-serie-b-que-podem-movimentar-o-mercado.html"
+    },
+    {
+      "titulo": "Gazeta de Alagoas — CRB repete erros e fica fora do acesso",
+      "url": "https://www.gazetadealagoas.com.br/esportes/950429/crb-repete-erros-que-resultam-em-novo-fracasso-na-serie-b"
+    }
+  ]
+}

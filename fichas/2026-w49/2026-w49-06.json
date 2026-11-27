@@ -1,0 +1,112 @@
+{
+  "id": "2026-w49-06",
+  "semana": "2026-w49",
+  "posicao": 6,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Lucas Rodrigues",
+    "clube": "Goiás",
+    "posicao": "Volante",
+    "idade": 19
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "3,35",
+      "rotulo": "MILHÕES DE EUROS A MAIS",
+      "sub": "MAIOR VALORIZAÇÃO DA SÉRIE B",
+      "alerta": "FLAMENGO E VASCO NA DISPUTA",
+      "narracao": "Três vírgula trinta e cinco milhões de euros a mais no valor de mercado… a maior valorização da Série B. Esse é o Lucas Rodrigues, dezenove anos, volante do Goiás. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2025",
+          "linha1": "Estreia no profissional",
+          "linha2": "pelo Goiás"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Título goiano",
+          "linha2": "o 1º do Goiás em 7 anos"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Seleção sub-20",
+          "linha2": "gol contra a Dinamarca",
+          "destaque": true
+        }
+      ],
+      "narracao": "Estreou no profissional em dois mil e vinte e cinco. Em dois mil e vinte e seis, foi peça-chave no primeiro título goiano do Goiás em sete anos… e virou titular da seleção sub-vinte."
+    },
+    {
+      "tipo": "numero",
+      "valor": 6,
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "como volante titular",
+      "narracao": "Volante com seis gols na Série B. E o valor dele saltou de cento e cinquenta mil para três milhões e meio de euros."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "R$ 300 mi",
+      "linha": "MULTA PARA O EXTERIOR",
+      "nota": "Premier League e Barça sondaram",
+      "narracao": "Detalhe: a multa para o exterior é de trezentos milhões de reais. Clubes da Premier League e o Barcelona já sondaram."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Lesão no joelho em junho",
+        "Perdeu 8 jogos da Série B",
+        "Só 19 anos"
+      ],
+      "narracao": "O ponto fraco: uma lesão no joelho em junho tirou ele de oito jogos da Série B. E é um garoto de dezenove anos."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "O FLAMENGO OFERECEU",
+      "preco": "€ 6,5 MI",
+      "tag": "Vasco também na briga",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "O Flamengo ofereceu seis milhões e meio de euros por setenta por cento. O Vasco já tinha acordo com o jogador. É o preço de uma aposta… cabe no seu time?",
+      "conversao": "≈ R$ 42 mi por 70%"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Esmeraldino — Lucas Rodrigues lidera valorização da Série B (Transfermarkt)",
+      "url": "https://esmeraldino.com/goias-surpreende-e-coloca-dois/"
+    },
+    {
+      "titulo": "Diário do Rio — quanto o Vasco topa pagar por Lucas Rodrigues",
+      "url": "https://diariodorio.com/esporte/2026/11/11/veja-quanto-o-vasco-topa-pagar-ao-goias-para-contratar-o-volante-lucas-rodrigues.html"
+    },
+    {
+      "titulo": "Tribuna do Planalto — multa e sondagens por Lucas Rodrigues",
+      "url": "https://tribunadoplanalto.com.br/?p=116551"
+    },
+    {
+      "titulo": "NetVasco — Admar Lopes em Goiânia por Lucas Rodrigues",
+      "url": "https://netvasco.com.br/n/396192/admar-lopes-viajou-a-goiania-para-negociar-a-contratacao-de-lucas-rodrigues"
+    },
+    {
+      "titulo": "NetVasco — Vasco aguarda resposta do Goiás",
+      "url": "https://www.netvasco.com.br/n/396587/vasco-aguarda-resposta-do-goias-para-fechar-contratacao-de-lucas-rodrigues"
+    },
+    {
+      "titulo": "TV Sim — Flamengo oferece R$ 42 milhões ao Goiás",
+      "url": "https://tvsimbrasil.com.br/go/goias/esportes/noticia/2026/11/25/flamengo-oferece-42-milhoes-goias-lucas-rodrigues"
+    },
+    {
+      "titulo": "O Popular — Lucas Rodrigues recuperado de lesão",
+      "url": "https://opopular.com.br/esporte/recuperado-de-les-o-lucas-rodrigues-pode-voltar-ao-time-do-goias-contra-o-cuiaba-pela-serie-b-1.3447062"
+    }
+  ]
+}

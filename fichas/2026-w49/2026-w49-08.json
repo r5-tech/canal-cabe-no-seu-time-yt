@@ -1,0 +1,107 @@
+{
+  "id": "2026-w49-08",
+  "semana": "2026-w49",
+  "posicao": 8,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Raí Silva",
+    "clube": "Juventude",
+    "posicao": "Meia",
+    "idade": 24
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "10",
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "ARTILHEIRO DO JUVENTUDE",
+      "alerta": "O GRÊMIO TENTOU E ESBARROU",
+      "narracao": "Dez gols na Série B… o artilheiro do Juventude. O Grêmio tentou levar de graça e esbarrou numa cláusula. Esse é o Raí, vinte e quatro anos. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2024",
+          "linha1": "Campeão da Libertadores",
+          "linha2": "no elenco do Botafogo"
+        },
+        {
+          "ano": "2025",
+          "linha1": "Volta Redonda:",
+          "linha2": "31 jogos na Série B"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Juventude, de graça",
+          "linha2": "e acesso à Série A",
+          "destaque": true
+        }
+      ],
+      "narracao": "Cria do Botafogo, estava no elenco campeão da Libertadores. Rodou por empréstimos… e chegou ao Juventude de graça, no fim do contrato."
+    },
+    {
+      "tipo": "numero",
+      "valor": 10,
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "o maior do clube desde 2020",
+      "narracao": "Dez gols, o maior goleador do Juventude num Brasileirão desde dois mil e vinte. E foi dele o gol do acesso, contra o Botafogo de Ribeirão."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "19 de 38",
+      "linha": "PONTOS COM RAÍ OU SAFIRA",
+      "nota": "até a 21ª rodada",
+      "narracao": "Detalhe: na metade do campeonato, ele e o Alisson Safira tinham participado de dezenove dos trinta e oito pontos do time. Metade da campanha passou pelos pés deles."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Botafogo: 28 jogos, 3 gols",
+        "Ainda sem prova na elite"
+      ],
+      "narracao": "O ponto fraco: no Botafogo foram vinte e oito jogos e só três gols. Na elite, ele ainda não provou nada."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "CONTRATO ATÉ",
+      "preco": "DEZ/2027",
+      "tag": "Só sai pela multa",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "Com o acesso, o contrato renovou sozinho até dois mil e vinte e sete. Agora, só sai pagando a multa. Grêmio e outros grandes de olho. Cabe no seu time?",
+      "conversao": "renovação automática"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Lance! — Raí, ex-Botafogo, protagonista do acesso do Juventude",
+      "url": "https://www.lance.com.br/futebol-nacional/rai-ex-botafogo-e-protagonista-na-campanha-de-acesso-do-juventude-a-elite.html"
+    },
+    {
+      "titulo": "Lance! — Raí deixa o Botafogo e é anunciado pelo Juventude",
+      "url": "https://www.lance.com.br/botafogo/jogador-deixa-o-botafogo-e-e-anunciado-pelo-juventude.html"
+    },
+    {
+      "titulo": "Grêmio News — Grêmio esbarra em cláusula de contrato",
+      "url": "https://www.gremionews.com.br/bastidores/5188-gremio-esbarra-em-clausula-de-contrato-para-negociar-por-destaque-da-serie-b"
+    },
+    {
+      "titulo": "Leouve — renovações no Juventude para 2027",
+      "url": "https://leouve.com.br/esportes/dois-jogadores-renovam-contrato-com-o-juventude-para-2027/"
+    },
+    {
+      "titulo": "Última Divisão — os acessos de Novorizontino e Juventude",
+      "url": "https://www.ultimadivisao.com.br/acessos-serie-b-2026-novorizontino-juventude/"
+    },
+    {
+      "titulo": "Campos 24 Horas — Raí e Safira participaram de metade dos pontos",
+      "url": "https://campos24horas.com.br/noticia/rai-e-safira-participaram-de-metade-dos-pontos-do-juventude-na-serie-b-veja-numeros-20260811080018"
+    }
+  ]
+}

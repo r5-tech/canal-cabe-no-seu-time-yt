@@ -1,0 +1,120 @@
+{
+  "id": "2026-w49-04",
+  "semana": "2026-w49",
+  "posicao": 4,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Gabriel Boschilia",
+    "clube": "Operário-PR",
+    "posicao": "Meia",
+    "idade": 30
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "13",
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "CAMISA 10 DO OPERÁRIO",
+      "alerta": "\"ELE NÃO QUER SAIR\"",
+      "narracao": "Treze gols na Série B, e um presidente que avisa: ele não quer sair. Esse é o Gabriel Boschilia, trinta anos, camisa dez e capitão do Operário. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2020",
+          "linha1": "Volta ao Brasil",
+          "linha2": "depois de Monaco e Nantes"
+        },
+        {
+          "ano": "2024",
+          "linha1": "Chega ao Operário",
+          "linha2": "em agosto"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Craque do Paranaense",
+          "linha2": "e bicampeão estadual",
+          "destaque": true
+        }
+      ],
+      "narracao": "Revelado pelo São Paulo, jogou no Monaco, no Nantes e no Standard Liège. Voltou ao Brasil em dois mil e vinte… e se reinventou no Operário, craque do Paranaense."
+    },
+    {
+      "tipo": "numero",
+      "valor": 17,
+      "rotulo": "PARTICIPAÇÕES",
+      "sub": "13 gols e 4 assistências",
+      "narracao": "Treze gols e quatro assistências: dezessete participações. Sexto artilheiro do campeonato, sendo meia."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "3 de 4",
+      "linha": "DOS TOP 4 ERAM EX-COXA",
+      "nota": "Robson, Boschilia e Coutinho",
+      "narracao": "Detalhe: ele faz parte de uma curiosidade. Em setembro, três dos quatro maiores artilheiros da Série B tinham passado pelo Coritiba… onde ele fez só um gol."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Secou na reta final",
+        "13 gols em set., 13 no fim",
+        "30 anos"
+      ],
+      "narracao": "O ponto fraco: secou na reta final. Tinha treze gols no fim de setembro… e terminou com os mesmos treze. E já tem trinta anos."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "VALOR DE MERCADO",
+      "preco": "€ 1,5 MI",
+      "tag": "Contrato até nov/2027",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "Valor de mercado de um milhão e meio de euros, contrato até o fim de dois mil e vinte e sete e uma multa alta. Vasco, Fortaleza e Goiás já tentaram. Cabe no seu time?",
+      "conversao": "≈ R$ 8,7 milhões"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Itatiaia — Boschilia renova com o Operário após sondagem do Fortaleza",
+      "url": "https://www.itatiaia.com.br/esportes/futebol/mercado-da-bola/ex-inter-e-sao-paulo-renova-com-clube-da-serie-b-apos-sondagem-do-fortaleza/"
+    },
+    {
+      "titulo": "Um Dois Esportes — Operário renova Boschilia até 2027",
+      "url": "https://www.umdoisesportes.com.br/futebol-paranaense/operario-renova-boschilia-ate-2027-serie-b/"
+    },
+    {
+      "titulo": "Um Dois Esportes — Boschilia, craque do Paranaense 2026",
+      "url": "https://www.umdoisesportes.com.br/futebol-paranaense/gabriel-boschilia-craque-paranaense-2026-operario/"
+    },
+    {
+      "titulo": "DOL — presidente do Operário: 'ele não quer sair e tem multa alta'",
+      "url": "https://dol.com.br/esporte/remo/943971/presidente-do-operario-descarta-negociacao-de-boschilia-com-o-remo?d=1"
+    },
+    {
+      "titulo": "Um Dois Esportes — Vasco e Boschilia",
+      "url": "https://www.umdoisesportes.com.br/futebol-paranaense/vasco-boschilia-operario-negociacao-mercado-bola/"
+    },
+    {
+      "titulo": "NetVasco — Boschilia vê com bons olhos o Vasco (valor de mercado)",
+      "url": "https://netvasco.com.br/n/389186/destaque-da-serie-b-gabriel-boschilia-do-operario-pr-enxerga-com-bons-olhos-uma-possivel-transferencia-para-o-vasco"
+    },
+    {
+      "titulo": "Banda B — ex-Coritiba dominam a artilharia da Série B",
+      "url": "https://www.bandab.com.br/esporte/times/coritiba/ex-coritiba-artilharia-serie-b-2026/"
+    },
+    {
+      "titulo": "365Scores — destaques estatísticos da Série B 2026",
+      "url": "https://www.365scores.com/pt-br/news/magazine/jogadores-destaques-estatisticos-serie-b-2026/"
+    },
+    {
+      "titulo": "Revista Oeste — artilharia final da Série B 2026",
+      "url": "https://revistaoeste.com/esporte/artilheiros-serie-b-2026-ranking-final-goleadores/"
+    }
+  ]
+}

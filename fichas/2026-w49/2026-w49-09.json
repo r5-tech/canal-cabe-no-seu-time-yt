@@ -1,0 +1,107 @@
+{
+  "id": "2026-w49-09",
+  "semana": "2026-w49",
+  "posicao": 9,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Pedro Perotti",
+    "clube": "Sport",
+    "posicao": "Atacante"
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "15",
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "3º ARTILHEIRO",
+      "alerta": "CONTRATO ACABA AGORA EM NOVEMBRO",
+      "narracao": "Quinze gols na Série B… e o contrato acaba agora, em novembro. Esse é o Pedro Perotti, do Sport. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2020",
+          "linha1": "Série B pela Chape",
+          "linha2": "179 jogos e 49 gols no clube"
+        },
+        {
+          "ano": "2025",
+          "linha1": "Acesso à Série A",
+          "linha2": "com a Chapecoense"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Sport, contrato curto",
+          "linha2": "até o fim da Série B",
+          "destaque": true
+        }
+      ],
+      "narracao": "Cria da Chapecoense: cento e setenta e nove jogos e quarenta e nove gols, terceiro maior artilheiro da história do clube. Rodou por Portugal, Japão e Polônia… e chegou ao Sport em março, com contrato até o fim da Série B."
+    },
+    {
+      "tipo": "numero",
+      "valor": 17,
+      "rotulo": "GOLS NA TEMPORADA",
+      "sub": "em 42 jogos pelo Sport",
+      "narracao": "Na temporada, dezessete gols em quarenta e dois jogos. Artilheiro do elenco, empatado com o Barletta."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "E NÃO FOI SORTE:",
+      "grande": "14,35",
+      "linha": "GOLS ESPERADOS (xG)",
+      "nota": "e ele fez 15 na Série B",
+      "narracao": "E não foi sorte: o xG dele foi de quatorze vírgula trinta e cinco. Quinze gols… é o finalizador entregando o que a jogada promete."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Só 1 assistência na Série B",
+        "Perdeu a titularidade",
+        "na reta final"
+      ],
+      "narracao": "O ponto fraco: só uma assistência na Série B. Ele finaliza, mas quase não cria. E perdeu a titularidade na reta final."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "CONTRATO ATÉ",
+      "preco": "NOV/2026",
+      "tag": "Renovação em aberto",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "A renovação está em aberto: o estafe pediu aumento e mais de uma temporada, e o Sport depende da eleição para decidir. Se não fechar… ele fica livre no mercado. Cabe no seu time?",
+      "conversao": "depende da eleição"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Diario de Pernambuco — Sport anuncia Pedro Perotti",
+      "url": "https://www.diariodepernambuco.com.br/esportes-dp/sport/2026/03/11710965-sport-anuncia-a-chegada-do-atacante-pedro-perotti.html"
+    },
+    {
+      "titulo": "Diario de Pernambuco — Perotti deixa renovação em aberto",
+      "url": "https://www.diariodepernambuco.com.br/esportes-dp/sport/2026/11/11729169-perotti-deixa-renovacao-em-aberto-nega-interesse-do-santa-cruz-e-se-declara-ao-sport-amo-esse-clube.html"
+    },
+    {
+      "titulo": "Diario de Pernambuco — contraproposta de Perotti vai às chapas da eleição",
+      "url": "https://www.diariodepernambuco.com.br/esportes-dp/sport/2026/11/11729373-sport-recebe-contraproposta-por-renovacao-de-perotti-e-levara-negociacao-as-chapas-da-eleicao.html"
+    },
+    {
+      "titulo": "Diario de Pernambuco — raio-x dos contratos do Sport para 2027",
+      "url": "https://www.diariodepernambuco.com.br/esportes-dp/sport/2026/11/11729297-raio-x-do-elenco-do-sport-veja-quem-tem-contrato-quem-esta-de-saida-e-quem-retorna-em-2027.html"
+    },
+    {
+      "titulo": "365Scores — destaques estatísticos da Série B 2026",
+      "url": "https://www.365scores.com/pt-br/news/magazine/jogadores-destaques-estatisticos-serie-b-2026/"
+    },
+    {
+      "titulo": "Revista Oeste — artilharia final da Série B 2026",
+      "url": "https://revistaoeste.com/esporte/artilheiros-serie-b-2026-ranking-final-goleadores/"
+    }
+  ]
+}

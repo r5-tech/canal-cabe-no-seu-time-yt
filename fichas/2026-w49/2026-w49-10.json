@@ -1,0 +1,137 @@
+{
+  "id": "2026-w49-10",
+  "semana": "2026-w49",
+  "posicao": 10,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Robson",
+    "clube": "Novorizontino",
+    "posicao": "Atacante",
+    "idade": 35
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "25",
+      "rotulo": "GOLS EM 2026",
+      "sub": "RECORDE DA CARREIRA",
+      "alerta": "AOS 35 ANOS",
+      "narracao": "Vinte e cinco gols na temporada… o recorde da carreira. Aos trinta e cinco anos. Esse é o Robson, capitão do Novorizontino. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2022",
+          "linha1": "Fortaleza: 105 jogos",
+          "linha2": "21 gols e Copa do Nordeste"
+        },
+        {
+          "ano": "2025",
+          "linha1": "Chega ao Novorizontino",
+          "linha2": "depois de 48 gols no Coxa"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Hat-trick no Palmeiras",
+          "linha2": "e capitão do acesso",
+          "destaque": true
+        }
+      ],
+      "narracao": "Passou pelo Fortaleza, onde ganhou a Copa do Nordeste. Fez quarenta e oito gols pelo Coritiba. E em dois mil e vinte e seis abriu o ano com três gols nos quatro a zero sobre o Palmeiras."
+    },
+    {
+      "tipo": "numero",
+      "valor": 17,
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "vice-artilheiro do campeonato",
+      "narracao": "Na Série B foram dezessete gols. Vice-artilheiro, um atrás do Mikael… e capitão do primeiro acesso da história do Novorizontino à Série A."
+    },
+    {
+      "tipo": "barras",
+      "titulo": "ARTILHARIA",
+      "sub": "SÉRIE B 2026",
+      "decimais": 0,
+      "barras": [
+        {
+          "nome": "Mikael",
+          "valor": 18
+        },
+        {
+          "nome": "Robson",
+          "valor": 17,
+          "destaque": true
+        },
+        {
+          "nome": "Perotti",
+          "valor": 15
+        },
+        {
+          "nome": "Gustavo Coutinho",
+          "valor": 15
+        }
+      ],
+      "narracao": "Na artilharia, só o Mikael fez mais. Ficou à frente de Perotti e Gustavo Coutinho, com quinze cada."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "25",
+      "linha": "GOLS NO ANO, COMO GABIGOL",
+      "nota": "e Pedro, no ranking de 20/10",
+      "narracao": "Detalhe: em outubro, ele tinha os mesmos vinte e cinco gols no ano que Gabigol e Pedro."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "35 anos",
+        "Cerca de 100 dias fora",
+        "por lesões em 2025"
+      ],
+      "narracao": "O ponto fraco: trinta e cinco anos. E em dois mil e vinte e cinco foram cerca de cem dias perdidos com lesões musculares."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "O NOVORIZONTINO QUER",
+      "preco": "RENOVAR",
+      "tag": "Série A em 2027",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "O Novorizontino quer segurar o capitão para a Série A. Mas um centroavante assim, no fim da carreira e no auge… cabe no seu time?"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Terra — quem é Robson, autor de hat-trick contra o Palmeiras",
+      "url": "https://www.terra.com.br/esportes/futebol/saiba-quem-e-robson-autor-de-hat-trick-contra-o-palmeiras-no-paulistao,a449d554acc3bce764f47715a6ee58bcbj3rm9o3.html"
+    },
+    {
+      "titulo": "Mix Vale — Rômulo e Robson, heróis do acesso do Novorizontino",
+      "url": "https://www.mixvale.com.br/2026/11/10/romulo-e-robson-herois-do-acesso-do-novorizontino-somam-29-gols-e-levam-clube-a-serie-a/"
+    },
+    {
+      "titulo": "Diário do Nordeste — Robson e Rômulo somam 44 participações",
+      "url": "https://diariodonordeste.verdesmares.com.br/jogada/ex-fortaleza-e-ceara-dupla-robson-e-romulo-somam-44-participacoes-em-gols-na-serie-b-1.3800487"
+    },
+    {
+      "titulo": "Um Dois Esportes — renegados de Athletico e Coritiba no acesso do Novorizontino",
+      "url": "https://www.umdoisesportes.com.br/campeonatos/serie-b/renegados-de-athletico-e-coritiba-brilham-no-acesso-do-novorizontino-a-serie-a-do-brasileirao/"
+    },
+    {
+      "titulo": "Um Dois Esportes — ranking de artilheiros do Brasil na temporada",
+      "url": "https://www.umdoisesportes.com.br/futebol-brasileiro/ranking-artilheiros-temporada-brasil/"
+    },
+    {
+      "titulo": "CBF — Novorizontino garante acesso inédito à Série A",
+      "url": "https://www.cbf.com.br/futebol-brasileiro/noticias/campeonato-brasileiro-serie-b/a/novorizontino-garante-acesso-e-disputara-serie-a-pela-primeira-vez-na-historia"
+    },
+    {
+      "titulo": "Revista Oeste — artilharia final da Série B 2026",
+      "url": "https://revistaoeste.com/esporte/artilheiros-serie-b-2026-ranking-final-goleadores/"
+    }
+  ]
+}

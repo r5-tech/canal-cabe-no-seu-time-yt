@@ -1,0 +1,138 @@
+{
+  "id": "2026-w49-05",
+  "semana": "2026-w49",
+  "posicao": 5,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Mailton",
+    "clube": "Fortaleza (emp. São Paulo)",
+    "posicao": "Lateral-direito",
+    "idade": 28
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "10",
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "JOGANDO DE LATERAL",
+      "alerta": "E VOLTA PRO SÃO PAULO EM JANEIRO",
+      "narracao": "Dez gols na Série B… jogando de lateral-direito. E em janeiro ele volta para o São Paulo. Esse é o Mailton, do Fortaleza. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2025",
+          "linha1": "Destaque na Chapecoense",
+          "linha2": "e São Paulo contrata"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Emprestado ao Fortaleza",
+          "linha2": "sem opção de compra"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Craque do Cearense",
+          "linha2": "e artilheiro na Série B",
+          "destaque": true
+        }
+      ],
+      "narracao": "Revelado pelo Palmeiras, brilhou na Chapecoense e foi contratado pelo São Paulo em dois mil e vinte e cinco. Emprestado ao Fortaleza, foi eleito o craque do Cearense."
+    },
+    {
+      "tipo": "numero",
+      "valor": 10,
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "e 4 assistências",
+      "narracao": "Na Série B, dez gols e quatro assistências. Artilheiro do Fortaleza no campeonato… sendo lateral."
+    },
+    {
+      "tipo": "barras",
+      "titulo": "PARTICIPAÇÕES",
+      "sub": "LATERAIS DO BRASIL, ATÉ 26/10",
+      "decimais": 0,
+      "barras": [
+        {
+          "nome": "Mailton",
+          "valor": 20,
+          "destaque": true
+        },
+        {
+          "nome": "Luciano Juba",
+          "valor": 16
+        },
+        {
+          "nome": "Puma Rodríguez",
+          "valor": 16
+        },
+        {
+          "nome": "Bernabéi",
+          "valor": 14
+        }
+      ],
+      "narracao": "Entre todos os laterais do Brasil, ninguém tinha tantas participações em gol na temporada. Vinte, contra dezesseis do Luciano Juba e do Puma Rodríguez."
+    },
+    {
+      "tipo": "destaque",
+      "topo": "DETALHE:",
+      "grande": "43 mil",
+      "linha": "VIRAM O GOLAÇO DO MANDO",
+      "nota": "falta no ângulo na última rodada",
+      "narracao": "Detalhe: na última rodada, com mais de quarenta e três mil no estádio, foi dele o golaço que deu ao Fortaleza o mando no playoff."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "São Paulo: 10 jogos",
+        "sem participar de gol",
+        "Empréstimo sem opção"
+      ],
+      "narracao": "O ponto fraco: no São Paulo foram dez jogos sem participar de gol. E o empréstimo não tem opção de compra."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "EMPRÉSTIMO ATÉ",
+      "preco": "DEZ/2026",
+      "tag": "São Paulo decide em jan.",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "O São Paulo vai reavaliar em janeiro. Se não ficar no Morumbi… cabe no seu time?",
+      "conversao": "contrato com o SP até 2027"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "São Paulo FC — empréstimo de Mailton ao Fortaleza",
+      "url": "https://www.saopaulofc.net/sao-paulo-acerta-emprestimo-de-mailton-ao-fortaleza/"
+    },
+    {
+      "titulo": "Terra — São Paulo prepara retorno de Mailton",
+      "url": "https://www.terra.com.br/esportes/futebol/mercado-da-bola/sao-paulo-prepara-retorno-de-mailton-apos-boa-temporada-no-fortaleza,bb7aa0fe10ef97f5ca0247b7c1ba12d5sz7ii68y.html"
+    },
+    {
+      "titulo": "O POVO — Mailton, vice-artilheiro e protagonista do Fortaleza",
+      "url": "https://www.opovo.com.br/esportes/futebol/times/fortaleza/2026/10/14/vice-artilheiro-mailton-e-protagonista-do-fortaleza-em-2026.html"
+    },
+    {
+      "titulo": "O POVO — Mailton chega a 20 participações em gols",
+      "url": "https://www.opovo.com.br/esportes/futebol/times/fortaleza/2026/10/26/mailton-chega-a-20-participacoes-em-gols-pelo-fortaleza.html"
+    },
+    {
+      "titulo": "O POVO — Mailton, artilheiro do Fortaleza na Série B",
+      "url": "https://mais.opovo.com.br/jornal/esportes/2026/11/19/mailton-destaca-impacto-de-vojvoda-no-fortaleza-e-projeta-acesso-esta-muito-vivo.html"
+    },
+    {
+      "titulo": "Diário do Nordeste — Fortaleza vence o Vila Nova com golaço de Mailton",
+      "url": "https://diariodonordeste.verdesmares.com.br/jogada/fortaleza-vence-o-vila-nova-com-golaco-de-mailton-e-garante-vantagem-nos-playoffs-da-serie-b-1.3805889"
+    },
+    {
+      "titulo": "Diário do Nordeste — seleção da Série B 2026",
+      "url": "https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/alexandre-mota/sele%C3%A7%C3%A3o-da-s%C3%A9rie-b-de-2026-veja-os-melhores-jogadores-1.3806988"
+    }
+  ]
+}

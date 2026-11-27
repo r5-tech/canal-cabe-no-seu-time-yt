@@ -1,0 +1,146 @@
+{
+  "id": "2026-w49-07",
+  "semana": "2026-w49",
+  "posicao": 7,
+  "tema": "Top 10 da Série B 2026",
+  "jogador": {
+    "nome": "Chrystian Barletta",
+    "clube": "Sport",
+    "posicao": "Ponta",
+    "idade": 25
+  },
+  "voz": "pm_alex",
+  "velocidade": 1.15,
+  "musica": "scout-01",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "numero": "14",
+      "rotulo": "GOLS NA SÉRIE B",
+      "sub": "EM 32 JOGOS",
+      "alerta": "SEIS CLUBES NA FILA",
+      "narracao": "Quatorze gols em trinta e dois jogos de Série B… e seis clubes na fila. Esse é o Chrystian Barletta, vinte e cinco anos, do Sport. Cabe no seu time?"
+    },
+    {
+      "tipo": "linhaDoTempo",
+      "titulo": "A HISTÓRIA",
+      "itens": [
+        {
+          "ano": "2023",
+          "linha1": "Destaque no Paulistão",
+          "linha2": "pelo São Bernardo"
+        },
+        {
+          "ano": "2024",
+          "linha1": "Sport paga R$ 6 mi",
+          "linha2": "e leva do Ceará"
+        },
+        {
+          "ano": "2026",
+          "linha1": "Tri pernambucano",
+          "linha2": "e renova até 2029",
+          "destaque": true
+        }
+      ],
+      "narracao": "Revelado pelo Joinville, apareceu no Paulistão pelo São Bernardo. Em dois mil e vinte e quatro, o Sport pagou cerca de seis milhões de reais. Hoje é tricampeão pernambucano."
+    },
+    {
+      "tipo": "barras",
+      "titulo": "xG + xA",
+      "sub": "SÉRIE B 2026",
+      "decimais": 2,
+      "barras": [
+        {
+          "nome": "Rômulo",
+          "valor": 24.05
+        },
+        {
+          "nome": "Chrystian Barletta",
+          "valor": 18.37,
+          "destaque": true
+        },
+        {
+          "nome": "Dadá Belmonte",
+          "valor": 18.36
+        },
+        {
+          "nome": "Mikael",
+          "valor": 18.35
+        }
+      ],
+      "narracao": "No xG mais xA, que mede o perigo criado, só o Rômulo superou ele na Série B: dezoito vírgula trinta e sete."
+    },
+    {
+      "tipo": "numero",
+      "valor": 17,
+      "rotulo": "GOLS NO ANO",
+      "sub": "em 47 jogos",
+      "narracao": "No ano todo, dezessete gols em quarenta e sete jogos. E ele é o batedor oficial de pênaltis do time."
+    },
+    {
+      "tipo": "pontoFraco",
+      "titulo": "O PONTO FRACO",
+      "itens": [
+        "Sport terminou em 9º",
+        "Dependência da dupla",
+        "com Perotti"
+      ],
+      "narracao": "O ponto fraco: mesmo com ele entre os cinco artilheiros, o Sport terminou em nono. E em junho já se falava em dependência excessiva da dupla com o Perotti."
+    },
+    {
+      "tipo": "veredito",
+      "topo": "CONTRATO ATÉ",
+      "preco": "JUL/2029",
+      "tag": "Inter, Botafogo e Vasco",
+      "pergunta": "CABE NO SEU TIME?",
+      "narracao": "Contrato até dois mil e vinte e nove, e o Sport já recusou o Botafogo. Inter, Novorizontino e Vasco estão na briga. Vai ter que pagar caro… cabe no seu time?",
+      "conversao": "Sport tem 50% dos direitos"
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Terra — Vasco quer buscar Barletta no Nordeste",
+      "url": "https://www.terra.com.br/esportes/vasco/vasco-quer-buscar-seu-proximo-reforco-no-nordeste,c309b2dec706de3a5950365f6174f79frmipobjt.html"
+    },
+    {
+      "titulo": "Vascaíno.net — seis clubes atrás de Barletta",
+      "url": "https://vascaino.net/noticias-do-vasco/vasco-pode-dar-chapeu-botafogo/"
+    },
+    {
+      "titulo": "Portal de Prefeitura — Sport blinda Barletta até 2029",
+      "url": "https://portaldeprefeitura.com.br/esportes/sport-blinda-barletta-renova-contrato-ate-2029-botafogo/628445/"
+    },
+    {
+      "titulo": "Folha PE — Sport descarta venda de Barletta ao Botafogo",
+      "url": "https://www.folhape.com.br/esportes/sport-descarta-venda-de-barletta-ao-botafogo/502262/"
+    },
+    {
+      "titulo": "Diario de Pernambuco — Sport renova com Barletta até 2029",
+      "url": "https://www.diariodepernambuco.com.br/esportes-dp/sport/2026/07/11719973-sport-renova-contrato-de-chrystian-barletta-ate-2029.html"
+    },
+    {
+      "titulo": "Diario de Pernambuco — Sport oficializa Barletta (2024)",
+      "url": "https://www.diariodepernambuco.com.br/noticias/futebol/sport/2024/02/sport-oficializa-a-contratacao-de-chrystian-barletta-ex-ceara.html"
+    },
+    {
+      "titulo": "Portal de Prefeitura — Barletta, batedor de pênaltis do Sport",
+      "url": "https://portaldeprefeitura.com.br/esportes/barletta-vem-se-transformando-em-nome-de-grande-importancia-no-sport/621137/"
+    },
+    {
+      "titulo": "Portal de Prefeitura — dependência de Barletta e Perotti",
+      "url": "https://portaldeprefeitura.com.br/esportes/sport-tem-dependencia-de-barletta-e-perotti-que-ja-marcaram-quase-70/624216/"
+    },
+    {
+      "titulo": "Diario de Pernambuco — Sport vence o Goiás e encerra 2026",
+      "url": "https://www.diariodepernambuco.com.br/esportes-dp/sport/2026/11/11729165-sport-vence-goias-na-ultima-rodada-da-serie-b-e-encerra-temporada-de-2026.html"
+    },
+    {
+      "titulo": "365Scores — destaques estatísticos da Série B 2026",
+      "url": "https://www.365scores.com/pt-br/news/magazine/jogadores-destaques-estatisticos-serie-b-2026/"
+    },
+    {
+      "titulo": "Revista Oeste — artilharia final da Série B 2026",
+      "url": "https://revistaoeste.com/esporte/artilheiros-serie-b-2026-ranking-final-goleadores/"
+    }
+  ]
+}
