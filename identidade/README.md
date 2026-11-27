@@ -38,9 +38,9 @@ Regras: o verde é só para o que importa (no máximo um destaque por tela); nad
 **@ sugerido (YouTube e Instagram):** `@cabenoseutime` (alternativas, se estiver tomado: `@cabenoseutime.scout`, `@cabenoseutimeoficial`)
 
 **Descrição do YouTube** (cole em Personalização → Informações básicas):
-> Scout de futebol em 60 segundos.
+> Scout de futebol que foge do óbvio.
 >
-> Toda segunda sai um TOP 10: dez jogadores que fogem do óbvio, do #10 ao #1, com números, contexto, o ponto fraco e o veredito. Sub-20 pra ficar de olho, contratos vencendo, brasileiros escondidos na Europa, o melhor da rodada que ninguém viu.
+> Toda segunda sai um TOP 10: dez jogadores que fogem do óbvio, do #10 ao #1, com números, contexto, o ponto fraco e o veredito. Nos vídeos longos, a análise completa: jogo, contexto e mercado. Sub-20 pra ficar de olho, contratos vencendo, brasileiros escondidos na Europa, o melhor da rodada que ninguém viu.
 >
 > Aqui não tem lista de manchete. Tem a pergunta que todo diretor de futebol deveria fazer: cabe no seu time?
 >
@@ -49,8 +49,8 @@ Regras: o verde é só para o que importa (no máximo um destaque por tela); nad
 > 💬 Discorda do veredito? Comenta. Tem um nome pra gente analisar? Manda também.
 
 **Bio do Instagram** (até 150 caracteres):
-> Scout de futebol em 60s ⚽
-> TOP 10 toda segunda: números, ponto fraco e veredito.
+> Scout de futebol que foge do óbvio ⚽
+> Shorts, vídeos longos e TOP 10 toda segunda.
 > Cabe no seu time? 👇
 
 **Palavras-chave do canal** (YouTube Studio → Configurações → Canal):

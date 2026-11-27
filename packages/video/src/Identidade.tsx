@@ -95,7 +95,7 @@ export const Banner: React.FC = () => {
       <div style={{ position: "absolute", left: sx + 420, top: sy + 40, width: BANNER.seguraW - 440 }}>
         <Nome tamanho={150} />
         <div style={{ fontFamily: TEXTO, fontWeight: 700, fontSize: 50, color: COR.branco, marginTop: 26 }}>
-          Scout de futebol em 60 segundos
+          Scout de futebol que foge do óbvio
         </div>
         <div style={{ display: "flex", gap: 18, marginTop: 26 }}>
           <span style={{ background: COR.acento, color: COR.fundo, fontFamily: TITULO, fontSize: 44, padding: "4px 20px", borderRadius: 10 }}>
