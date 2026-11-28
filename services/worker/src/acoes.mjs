@@ -9,7 +9,32 @@ import * as ig from "./instagram.mjs";
 import * as yt from "./youtube.mjs";
 
 const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
-const PENDENTES = ["draft", "audio_ok", "rendered"];
+const escAttr = (s) => esc(s).replace(/"/g, "&quot;");
+
+/** Tamanho que o Telegram conta: o texto visível, sem tags e com entidades desfeitas. */
+const tamanhoVisivel = (html) =>
+  [...html.replace(/<[^>]*>/g, "").replace(/&(amp|lt|gt|quot);/g, "x")].length;
+
+/**
+ * Monta a legenda sem passar de 1024 caracteres visíveis. Nunca corta no meio de uma tag:
+ * vai incluindo as fontes inteiras enquanto couberem e avisa quantas ficaram de fora.
+ */
+function legendaQueCabe(cabecalho, linhas, limite = 1024) {
+  let texto = cabecalho;
+  for (let i = 0; i < linhas.length; i++) {
+    const resto = linhas.length - i - 1;
+    const candidato = `${texto}\n${linhas[i]}`;
+    const comAviso = resto ? `${candidato}\n<i>+${resto} fonte(s)</i>` : candidato;
+    if (tamanhoVisivel(comAviso) > limite) {
+      const faltam = linhas.length - i;
+      return `${texto}\n<i>+${faltam} fonte(s) na ficha</i>`;
+    }
+    texto = candidato;
+  }
+  return texto;
+}
+
+const PENDENTES =["draft", "audio_ok", "rendered"];
 
 /** Arquivos fichas/<semana>/*.json (a pasta "exemplo" fica de fora). */
 function listarFichas() {
@@ -104,12 +129,9 @@ export async function processarProximo({ forcar = false } = {}) {
         : dur < config.duracaoMin || dur > config.duracaoMax
           ? `⚠️ ${dur.toFixed(1)} s (meta ${config.duracaoMin}–${config.duracaoMax} s)`
           : `⏱ ${dur.toFixed(1)} s`;
-    const fontes = f.fontes.map((x) => `• <a href="${esc(x.url)}">${esc(x.titulo)}</a>`).join("\n");
-    const msg = await tg.enviarVideo(
-      atual.video,
-      `<b>#${f.posicao}</b> ${esc(f.jogador.nome)} · ${esc(f.tema)}\n${avisoDur}\n\n<b>Título:</b> ${esc(m.titulo)}\n\n<b>Fontes</b>\n${fontes}`.slice(0, 1024),
-      tg.botoesRevisao(atual.id),
-    );
+    const cabecalho = `<b>#${f.posicao}</b> ${esc(f.jogador.nome)} · ${esc(f.tema)}\n${avisoDur}\n\n<b>Título:</b> ${esc(m.titulo)}\n\n<b>Fontes</b>`;
+    const fontes = f.fontes.map((x) => `• <a href="${escAttr(x.url)}">${esc(x.titulo)}</a>`);
+    const msg = await tg.enviarVideo(atual.video, legendaQueCabe(cabecalho, fontes), tg.botoesRevisao(atual.id));
     sh.atualizar(e.id, { status: "in_review", telegram_msg_id: msg.message_id, tentativas: 0, erro: null });
     log(`[${e.id}] enviado para revisão`);
     await talvezResumoDaSemana(e.semana);
